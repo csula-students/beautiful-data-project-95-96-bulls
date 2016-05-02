@@ -7,67 +7,30 @@ import java.util.Collection;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+
+
 /**
  * Created by Tazzie on 5/1/2016.
  */
 public class InnocentCollector implements Collector<String, String> {
     private boolean DEBUG = true;
+    MongoClient mongoClient;
+    MongoDatabase database;
+    MongoCollection<Document> collection;
 
-    public void driver() throws URISyntaxException, IOException {
-        if (DEBUG)
-            System.out.println("Running InnocentCollector");
+    public InnocentCollector() {
+        // establish database connection to MongoDB
+        mongoClient = new MongoClient();
 
-        // read file and extract info from file
-        getData("Term_Records_1991_to_2014.tsv");
+        // select `bd-example` as testing database
+        database = mongoClient.getDatabase("bd-example");
 
-        // store info
-
-    }
-
-    private void getData(String filename) throws URISyntaxException, IOException {
-
-        File tsv = new File(
-                ClassLoader.getSystemResource(filename)
-                        .toURI()
-        );
-
-        StringTokenizer st;
-        BufferedReader TSVFile = new BufferedReader(new FileReader(tsv));
-        List<String> dataArray = new ArrayList<String>() ;
-        String dataRow = TSVFile.readLine(); // Read first line.
-        int counter = 0;
-
-        // total records = 10907334
-        // counter sentinel must be <= 9000000 to store in arraylist without being out of memory
-        while (dataRow != null && counter < 9000000){
-//            System.out.println("Counter: " + counter);
-            st = new StringTokenizer(dataRow,"\\t");
-            while(st.hasMoreElements()){
-//                System.out.println("st still has more elements");
-                dataArray.add(st.nextElement().toString());
-            }
-            dataRow = TSVFile.readLine(); // Read next line of data.
-
-            counter++;
-        }
-        // Close the file once all data has been read.
-        TSVFile.close();
-
-//        System.out.println("done with tokens");
-//        System.out.println("traversing dataArray");
-//        System.out.println();
-
-        if (DEBUG) {
-            for (String item : dataArray) {
-                System.out.println(item); // Print the data line.
-            }
-            System.out.println("done with dataArray");
-        }
-
-        System.out.println("Total records: " + counter);
-
-        // End the printout with a blank line.
-        System.out.println();
+        // select collection by name `tweets`
+        collection = database.getCollection("records");
     }
 
     @Override
@@ -80,9 +43,5 @@ public class InnocentCollector implements Collector<String, String> {
 
     }
 
-    public static void main(String[] args) throws URISyntaxException, IOException {
-        InnocentCollector tester = new InnocentCollector();
-        tester.driver();
-    }
 
 }
