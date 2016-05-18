@@ -1,5 +1,6 @@
 package edu.csula.datascience.acquisition;
 
+import com.mongodb.DB;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
@@ -32,12 +33,19 @@ public class InnocentCollectorApp {
             System.out.println("Running InnocentCollectorApp");
 
         // establish database connection to MongoDB
-        mongoClient = new MongoClient("db", 27017);
+        mongoClient = new MongoClient("localhost", 27017);
+
         // select database
         database = mongoClient.getDatabase("ProjectInnocence");
 
         // select collection by name `test`
         collection = database.getCollection("test");
+
+        collection.insertOne(new Document("address", new Document ()
+                .append("street", "123 4th Street")
+                .append("city", "Los Angeles")
+                .append("state", "CA")
+                .append("zipcode", "91111")));
 
         // read file and extract info from file
         getData("Term_Records_1991_to_2014.tsv");
@@ -60,6 +68,8 @@ public class InnocentCollectorApp {
         int counter = 0;
         int index = 0;
         int mongoIndex = 0;
+        List<Integer> records_col_list = new ArrayList<>();
+        setRecordColList(records_col_list);
 
         // total records = 10907334
         // counter sentinel must be <= 9000000 to store in arraylist without being out of memory
@@ -70,18 +80,37 @@ public class InnocentCollectorApp {
             dataRowArray = dataRow.split("\\t");
             index = 0;
 
+            /*
+            1. abt_inmate_id	--> how to account for duplicates?
+             2. ageadmit
+             3. education
+             4. race
+             5. state
+             6. offgeneral
+             7. offdetail
+             8. admityr
+             9. sentlgth
+            10. timesrvd
+            11. reltype
+             */
+
             // Is education or race not recorded? If so, skip record
             if (dataRowArray[4].isEmpty() || dataRowArray[12].isEmpty()) {
                 System.out.println("Record skipped: " + counter);
             }
             else {
                 for (String s : dataRowArray) {
-                    System.out.println("s: " + s + "\ti: " + index);
+                    if (records_col_list.contains(index))
+                        handleRecord(s, index);
                     index++;
                 }
-                addToMongo(dataRowArray, mongoIndex);
-                mongoIndex++;
+                //addToMongo(dataRowArray, mongoIndex);
+                //mongoIndex++;
             }
+
+            // common factors of data: race, state, crime, approximate time (year)
+
+            //
 
             dataRow = TSVFile.readLine(); // Read next line of data.
 
@@ -140,4 +169,22 @@ public class InnocentCollectorApp {
 
     }
 
+    private void handleRecord(String record, int index){
+        System.out.println("s: " + record + "\ti: " + index);
+    }
+
+    private void setRecordColList(List<Integer> recordColList){
+        int index = 0;
+        recordColList.add(index++, 0);      // inmate_id
+        recordColList.add(index++, 3);      // offense general
+        recordColList.add(index++, 4);      // education
+        recordColList.add(index++, 5);      // admit year
+        recordColList.add(index++, 10);     // sentence length
+        recordColList.add(index++, 11);     // offense detail
+        recordColList.add(index++, 12);     // race
+        recordColList.add(index++, 13);     // age admitted
+        recordColList.add(index++, 15);     // times served
+        recordColList.add(index++, 16);     // reltype
+        recordColList.add(index++, 17);     // state
+    }
 }
