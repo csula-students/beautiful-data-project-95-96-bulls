@@ -1,6 +1,4 @@
-package edu.csula.datascience.acquisition;
 
-import com.mongodb.DB;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
@@ -13,14 +11,25 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.*;
 
+
 /**
  * Created by Tazzie on 5/1/2016.
+ *
  */
 public class InnocentCollectorApp {
     private boolean DEBUG = true;
+
+    // MongoDB variables
     private MongoClient mongoClient;
     private MongoDatabase database;
     private MongoCollection<Document> collection;
+    private int mongoIndex = 0;
+
+    // file names
+    String term_tsv = "Term_Records_1991_to_2014.tsv";
+    String executions_csv = "Executions_1986_to_2016.csv";
+    String exhonorated_csv = "Exonorated_1989_to_2016.csv";
+
 
     public static void main(String[] args)  throws URISyntaxException, IOException{
         InnocentCollectorApp tester = new InnocentCollectorApp();
@@ -41,44 +50,53 @@ public class InnocentCollectorApp {
         // select collection by name `test`
         collection = database.getCollection("test");
 
-        collection.insertOne(new Document("address", new Document ()
-                .append("street", "123 4th Street")
-                .append("city", "Los Angeles")
-                .append("state", "CA")
-                .append("zipcode", "91111")));
+        // we want to update collection with new data, so drop old one
+        collection.drop();
+
+/*        Document stuff = new Document("address", "my house")
+                .append("borough", "Manhattan")
+                .append("cuisine", "Italian")
+                .append("grades", "A")
+                .append("name", "Vella")
+                .append("restaurant_id", "41704620");
+
+        collection.insertOne(stuff);*/
 
         // read file and extract info from file
-        getData("Term_Records_1991_to_2014.tsv");
+        getData(executions_csv);
+        getData(exhonorated_csv);
+        getData(term_tsv);
+
 
     }
 
     private void getData(String filename) throws URISyntaxException, IOException {
 
-        File tsv = new File(
+        // get file via ClassLoader > Resource folder
+        File file = new File(
                 ClassLoader.getSystemResource(filename)
                         .toURI()
         );
 
-        //StringTokenizer st;
-        BufferedReader TSVFile = new BufferedReader(new FileReader(tsv));
-        List<String> allDataArray = new ArrayList<>();
-        String[] dataRowArray;
-        String dataRow = TSVFile.readLine(); // Read first line.
-        //dataRow = TSVFile.readLine(); // Go to next line.
-        int counter = 0;
-        int index = 0;
-        int mongoIndex = 0;
-        List<Integer> records_col_list = new ArrayList<>();
-        setRecordColList(records_col_list);
 
-        // total records = 10907334
-        // counter sentinel must be <= 9000000 to store in arraylist without being out of memory
-        while (dataRow != null && counter < 10){
-            //System.out.println("Counter: " + counter);
-            //st = new StringTokenizer(dataRow,"\\t");
-            //System.out.println("dataRow contains: " + dataRow);
-            dataRowArray = dataRow.split("\\t");
-            index = 0;
+        BufferedReader bufferFile = new BufferedReader(new FileReader(file));   // This will be our reader file
+        String[] dataRowArray;                                                  // data for each row
+        String dataRow = bufferFile.readLine();                                 // Read first line.
+        int counter = 0;                                                        // tracks number of records
+
+        // loop to traverse through file(s)
+        while (dataRow != null){
+
+            // break down data row and store into an array for easy index access
+            // tab delimiter
+            if (filename.contains(".tsv"))
+                dataRowArray = dataRow.split("\\t");
+            // comma delimiter
+            else if (filename.contains(".csv"))
+                dataRowArray = dataRow.split(",");
+            // use a default... just in case
+            else
+                dataRowArray = dataRow.split("\\t");
 
             /*
             1. abt_inmate_id	--> how to account for duplicates?
@@ -94,37 +112,25 @@ public class InnocentCollectorApp {
             11. reltype
              */
 
-            // Is education or race not recorded? If so, skip record
-            if (dataRowArray[4].isEmpty() || dataRowArray[12].isEmpty()) {
-                System.out.println("Record skipped: " + counter);
-            }
-            else {
-                for (String s : dataRowArray) {
-                    if (records_col_list.contains(index))
-                        handleRecord(s, index);
-                    index++;
-                }
-                //addToMongo(dataRowArray, mongoIndex);
-                //mongoIndex++;
-            }
+            // exhonorated handling
+            if (filename.equals(exhonorated_csv))
+                addExhonoratedToMongo(dataRowArray, mongoIndex);
 
-            // common factors of data: race, state, crime, approximate time (year)
+            // executions handling
+            else if (filename.equals(executions_csv))
+                addExecutionsToMongo(dataRowArray, mongoIndex);
 
-            //
+            // term_records handling
+            else
+                addTermToMongo(dataRowArray, mongoIndex);
 
-            dataRow = TSVFile.readLine(); // Read next line of data.
-
+            dataRow = bufferFile.readLine(); // Read next line of data.
+            System.out.println(counter);
             counter++;
         }
-        // Close the file once all data has been read.
-        TSVFile.close();
 
-        if (DEBUG) {
-            for (String item : allDataArray) {
-                //System.out.println(item); // Print the data line.
-            }
-            System.out.println("done with dataArray");
-        }
+        // Close the file once all data has been read.
+        bufferFile.close();
 
         System.out.println("Total records: " + counter);
 
@@ -132,26 +138,28 @@ public class InnocentCollectorApp {
         System.out.println();
     }
 
-    private void addToMongo(String[] rowDataArray, int index){
+    private void addTermToMongo(String[] rowDataArray, int index){
         // to create new document
-        Document info = new Document("ABT_INMATE_ID", rowDataArray[0])
-                .append("SEX", rowDataArray[1])
-                .append("ADMTYPE", rowDataArray[2])
-                .append("OFFGENERAL", rowDataArray[3])
-                .append("EDUCATION", rowDataArray[4])
-                .append("ADMITYR", rowDataArray[5])
-                .append("RELEASEYR", rowDataArray[6])
-                .append("MAND_PRISREL_YEAR", rowDataArray[7])
-                .append("PROJ_PRISREL_YEAR", rowDataArray[8])
-                .append("PARELIG_YEAR", rowDataArray[9])
-                .append("SENTLGTH", rowDataArray[10])
-                .append("OFFDETAIL", rowDataArray[11])
-                .append("RACE", rowDataArray[12])
-                .append("AGEADMIT", rowDataArray[13])
-                .append("AGERELEASE", rowDataArray[14])
-                .append("TIMESRVD", rowDataArray[15])
-                .append("RELTYPE", rowDataArray[16])
-                .append("STATE", rowDataArray[17]);
+//        Document info = new Document("ABT_INMATE_ID", rowDataArray[0])
+//                .append("SEX", rowDataArray[1])
+//                .append("ADMTYPE", rowDataArray[2])
+//                .append("OFFGENERAL", rowDataArray[3])
+//                .append("EDUCATION", rowDataArray[4])
+//                .append("ADMITYR", rowDataArray[5])
+//                .append("RELEASEYR", rowDataArray[6])
+//                .append("MAND_PRISREL_YEAR", rowDataArray[7])
+//                .append("PROJ_PRISREL_YEAR", rowDataArray[8])
+//                .append("PARELIG_YEAR", rowDataArray[9])
+//                .append("SENTLGTH", rowDataArray[10])
+//                .append("OFFDETAIL", rowDataArray[11])
+//                .append("RACE", rowDataArray[12])
+//                .append("AGEADMIT", rowDataArray[13])
+//                .append("AGERELEASE", rowDataArray[14])
+//                .append("TIMESRVD", rowDataArray[15])
+//                .append("RELTYPE", rowDataArray[16])
+//                .append("STATE", rowDataArray[17]);
+        Document info = new Document("RACE", rowDataArray[12])
+                .append("filename", term_tsv);
 
         Document doc = new Document("name", "MongoDB")
                 .append("type", "database")
@@ -159,32 +167,35 @@ public class InnocentCollectorApp {
                 .append("info", info);
 
         // to insert document
-        collection.insertOne(doc);
-        System.out.println(
-                String.format(
-                        "Inserted new document %s",
-                        doc.toJson()
-                )
-        );
-
+        collection.insertOne(info);
     }
 
-    private void handleRecord(String record, int index){
-        System.out.println("s: " + record + "\ti: " + index);
+    private void addExecutionsToMongo(String[] rowDataArray, int index){
+        // to create new document
+        Document info = new Document("RACE", rowDataArray[4])
+                .append("filename", executions_csv);
+
+        Document doc = new Document("name", "MongoDB")
+                .append("type", "database")
+                .append("record_id", index)
+                .append("info", info);
+
+        // to insert document
+        collection.insertOne(info);
     }
 
-    private void setRecordColList(List<Integer> recordColList){
-        int index = 0;
-        recordColList.add(index++, 0);      // inmate_id
-        recordColList.add(index++, 3);      // offense general
-        recordColList.add(index++, 4);      // education
-        recordColList.add(index++, 5);      // admit year
-        recordColList.add(index++, 10);     // sentence length
-        recordColList.add(index++, 11);     // offense detail
-        recordColList.add(index++, 12);     // race
-        recordColList.add(index++, 13);     // age admitted
-        recordColList.add(index++, 15);     // times served
-        recordColList.add(index++, 16);     // reltype
-        recordColList.add(index++, 17);     // state
+    private void addExhonoratedToMongo(String[] rowDataArray, int index){
+        // to create new document
+        Document info = new Document("RACE", rowDataArray[3])
+                .append("filename", exhonorated_csv);
+
+        Document doc = new Document("name", "MongoDB")
+                .append("type", "database")
+                .append("record_id", index)
+                .append("info", info);
+
+        // to insert document
+        collection.insertOne(info);
     }
 }
+
