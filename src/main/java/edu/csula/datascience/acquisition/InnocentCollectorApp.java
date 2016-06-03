@@ -1,6 +1,8 @@
+package edu.csula.datascience.acquisition;
 
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
@@ -9,7 +11,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import static com.mongodb.client.model.Filters.eq;
 
 
 /**
@@ -22,13 +27,19 @@ public class InnocentCollectorApp {
     // MongoDB variables
     private MongoClient mongoClient;
     private MongoDatabase database;
-    private MongoCollection<Document> collection;
+    private MongoCollection<Document> records_coll;
+    private MongoCollection<Document> execution_coll;
+    private MongoCollection<Document> exonerated_coll;
     private int mongoIndex = 0;
 
     // file names
-    String term_tsv = "Term_Records_1991_to_2014.tsv";
-    String executions_csv = "Executions_1986_to_2016.csv";
-    String exhonorated_csv = "Exonorated_1989_to_2016.csv";
+    private final String term_tsv = "Term_Records_1991_to_2014.tsv";
+    private final String executions_csv = "Executions_1986_to_2016.csv";
+    private final String exonerated_csv = "Exonorated_1989_to_2016.csv";
+
+    // Needed for records collection
+    private Map<Integer, String> records_race_map = new HashMap<>();
+    private Map<Integer, String> records_crime_map = new HashMap<>();
 
 
     public static void main(String[] args)  throws URISyntaxException, IOException{
@@ -47,27 +58,48 @@ public class InnocentCollectorApp {
         // select database
         database = mongoClient.getDatabase("ProjectInnocence");
 
-        // select collection by name `test`
-        collection = database.getCollection("test");
+        // select records_coll by name `Records`
+        records_coll = database.getCollection("records");
 
-        // we want to update collection with new data, so drop old one
-        collection.drop();
+        //Query the Records records_coll to see if its empty
+        long myDoc = records_coll.count();
 
-/*        Document stuff = new Document("address", "my house")
-                .append("borough", "Manhattan")
-                .append("cuisine", "Italian")
-                .append("grades", "A")
-                .append("name", "Vella")
-                .append("restaurant_id", "41704620");
+        if(myDoc == 0) {
 
-        collection.insertOne(stuff);*/
-
-        // read file and extract info from file
-        getData(executions_csv);
-        getData(exhonorated_csv);
-        getData(term_tsv);
+            // read file and extract info from file
+            //getData(term_tsv);
+        }
 
 
+        execution_coll = database.getCollection("execute");
+
+//        execution_coll.drop();
+
+        long myDoc2 = execution_coll.count();
+
+        if(myDoc2 == 0) {
+
+            // read file and extract info from file
+            getData(executions_csv);
+        }
+
+
+        exonerated_coll = database.getCollection("exonerated");
+//        exonerated_coll.drop();
+
+        long myDoc3 = exonerated_coll.count();
+
+        if(myDoc3 == 0) {
+
+            // read file and extract info from file
+            getData(exonerated_csv);
+        }
+
+        // mungee files
+        setRecordsRaceMap();
+        mungeeData(executions_csv);
+        mungeeData(exonerated_csv);
+        mungeeData(term_tsv);
     }
 
     private void getData(String filename) throws URISyntaxException, IOException {
@@ -84,37 +116,23 @@ public class InnocentCollectorApp {
         String dataRow = bufferFile.readLine();                                 // Read first line.
         int counter = 0;                                                        // tracks number of records
 
-        // loop to traverse through file(s)
+        // loop to traverse through file(s) dataRow != null
         while (dataRow != null){
 
             // break down data row and store into an array for easy index access
             // tab delimiter
             if (filename.contains(".tsv"))
                 dataRowArray = dataRow.split("\\t");
-            // comma delimiter
+                // comma delimiter
             else if (filename.contains(".csv"))
                 dataRowArray = dataRow.split(",");
-            // use a default... just in case
+                // use a default... just in case
             else
                 dataRowArray = dataRow.split("\\t");
 
-            /*
-            1. abt_inmate_id	--> how to account for duplicates?
-             2. ageadmit
-             3. education
-             4. race
-             5. state
-             6. offgeneral
-             7. offdetail
-             8. admityr
-             9. sentlgth
-            10. timesrvd
-            11. reltype
-             */
-
             // exhonorated handling
-            if (filename.equals(exhonorated_csv))
-                addExhonoratedToMongo(dataRowArray, mongoIndex);
+            if (filename.equals(exonerated_csv))
+                addExoneratedToMongo(dataRowArray, mongoIndex);
 
             // executions handling
             else if (filename.equals(executions_csv))
@@ -140,62 +158,266 @@ public class InnocentCollectorApp {
 
     private void addTermToMongo(String[] rowDataArray, int index){
         // to create new document
-//        Document info = new Document("ABT_INMATE_ID", rowDataArray[0])
-//                .append("SEX", rowDataArray[1])
-//                .append("ADMTYPE", rowDataArray[2])
-//                .append("OFFGENERAL", rowDataArray[3])
-//                .append("EDUCATION", rowDataArray[4])
-//                .append("ADMITYR", rowDataArray[5])
-//                .append("RELEASEYR", rowDataArray[6])
-//                .append("MAND_PRISREL_YEAR", rowDataArray[7])
-//                .append("PROJ_PRISREL_YEAR", rowDataArray[8])
-//                .append("PARELIG_YEAR", rowDataArray[9])
-//                .append("SENTLGTH", rowDataArray[10])
-//                .append("OFFDETAIL", rowDataArray[11])
-//                .append("RACE", rowDataArray[12])
-//                .append("AGEADMIT", rowDataArray[13])
-//                .append("AGERELEASE", rowDataArray[14])
-//                .append("TIMESRVD", rowDataArray[15])
-//                .append("RELTYPE", rowDataArray[16])
-//                .append("STATE", rowDataArray[17]);
-        Document info = new Document("RACE", rowDataArray[12])
-                .append("filename", term_tsv);
+        Document info = new Document("Inmate_ID", rowDataArray[0])
+                .append("Sex", rowDataArray[1])
+                .append("Admit_Type", rowDataArray[2])
+                .append("Offense_General", rowDataArray[3])
+                .append("Admit_Year", rowDataArray[5])
+                .append("Mandatory_Release_Year", rowDataArray[7])
+                .append("Projected_Release_Year", rowDataArray[8])
+                .append("Parole_Eligibility_Year", rowDataArray[9])
+                .append("Sentence_Length", rowDataArray[10])
+                .append("Offense_Detail", rowDataArray[11])
+                .append("Race", rowDataArray[12])
+                .append("Age_Admitted", rowDataArray[13])
+                .append("Age_Release", rowDataArray[14])
+                .append("Time_Served", rowDataArray[15])
+                .append("Release_Type", rowDataArray[16])
+                .append("State", rowDataArray[17]);
 
-        Document doc = new Document("name", "MongoDB")
-                .append("type", "database")
-                .append("record_id", index)
-                .append("info", info);
-
-        // to insert document
-        collection.insertOne(info);
+        // filter race
+        if (!rowDataArray[12].isEmpty()) {
+            // filter state
+            if (!rowDataArray[17].isEmpty()) {
+                // filter admit year
+                if (!rowDataArray[5].isEmpty()) {
+                    // filter crime
+                    if (!rowDataArray[3].isEmpty()) {
+                        // to insert document
+                        records_coll.insertOne(info);
+                    }
+                }
+            }
+        }
     }
 
     private void addExecutionsToMongo(String[] rowDataArray, int index){
         // to create new document
-        Document info = new Document("RACE", rowDataArray[4])
-                .append("filename", executions_csv);
+        Document info = new Document("Year", rowDataArray[0])
+                .append("Age", rowDataArray[2])
+                .append("Race", rowDataArray[4])
+                .append("State", rowDataArray[6])
+                .append("Crime", "Murder");
 
-        Document doc = new Document("name", "MongoDB")
-                .append("type", "database")
-                .append("record_id", index)
-                .append("info", info);
-
-        // to insert document
-        collection.insertOne(info);
+        // filter year
+        if (!rowDataArray[0].isEmpty()){
+            // filter race
+            if (!rowDataArray[4].isEmpty()) {
+                // filter state
+                if (!rowDataArray[6].isEmpty()) {
+                    // to insert document
+                    execution_coll.insertOne(info);
+                }
+            }
+        }
     }
 
-    private void addExhonoratedToMongo(String[] rowDataArray, int index){
+    private void addExoneratedToMongo(String[] rowDataArray, int index){
         // to create new document
-        Document info = new Document("RACE", rowDataArray[3])
-                .append("filename", exhonorated_csv);
+        Document info = new Document("Race", rowDataArray[3])
+                .append("State", rowDataArray[5])
+                .append("Worst_Crime", rowDataArray[8])
+                .append("Convicted", rowDataArray[11])
+                .append("Exonerated", rowDataArray[12])
+                .append("Sentence", rowDataArray[13])
+                .append("OM", rowDataArray[20]);
 
-        Document doc = new Document("name", "MongoDB")
-                .append("type", "database")
-                .append("record_id", index)
-                .append("info", info);
+        // filter race
+        if (!rowDataArray[3].isEmpty()){
+            // filter state
+            if (!rowDataArray[5].isEmpty()) {
+                // filter Official misconduct
+                if (!rowDataArray[20].isEmpty()) {
+                    // to insert document
+                    exonerated_coll.insertOne(info);
+                }
+            }
+        }
+    }
 
-        // to insert document
-        collection.insertOne(info);
+    /*
+        swaps date field and replace with year field
+        @param file_name - data resource file name
+     */
+    private void mungeeData(String file_name){
+        System.out.println("In Mungee Data");
+        // Executions collection
+        if (file_name.equals(executions_csv)){
+            // change Year field to Integer
+            yearToInt(execution_coll, "Year");
+
+            // change age field to integer
+            stringToInt(execution_coll, "Age");
+        }
+
+        // Exonerated collection
+        else if (file_name.equals(exonerated_csv)){
+            System.out.println("Working on Exonerated");
+            // convert sentence to integer
+            sentenceToInt(exonerated_coll, "Sentence");
+
+            // change Convicted field to integer
+            stringToInt(exonerated_coll, "Convicted");
+
+            // change Exonerated to integer
+            stringToInt(exonerated_coll, "Exonerated");
+        }
+
+        // Records Collection
+        else{
+            normalizeRecords(records_coll, "Race");
+            normalizeRecords(records_coll, "Offense_General");
+        }
+
+    }
+
+    /*
+        Changes year field to integer
+        @param coll - mongo collection
+        @param field - column or field of collection
+     */
+    private void yearToInt(MongoCollection<Document> coll, String field){
+        MongoCursor<Document> cursor = coll.find().iterator();
+        cursor.next();  // skip the header
+        try{
+            int yearNum = 0;
+            Document doc;
+            while (cursor.hasNext()){
+                // retrieve current document
+                doc = cursor.next();
+
+                // get year from DATE field
+                try{
+                    yearNum = Integer.parseInt(doc.get(field).toString().split("/")[2]);
+                }
+                catch (ArrayIndexOutOfBoundsException e){
+                    // if Year is not in DATE format, skip rest of instructions
+                    return;
+                }
+
+                // Replace old value with updated value
+                doc.replace(field, yearNum);
+
+                // replace old document with updated document via _id
+                coll.replaceOne(eq("_id", doc.get("_id")), doc);
+            }
+        }
+        catch(Exception e){
+            System.err.println("Error. Could not replace DATE with YEAR.");
+            e.printStackTrace();
+        }
+        // close cursor
+        cursor.close();
+    }
+
+    /*
+        Converts String to Int
+        @param coll - mongo collection
+        @param field - column or field of collection
+     */
+    private void stringToInt(MongoCollection<Document> coll, String field){
+        MongoCursor<Document> cursor = coll.find().iterator();
+        cursor.next();  // skip the header
+        int num = 0;
+        Document doc;
+        while (cursor.hasNext()){
+            // retrieve current document
+            doc = cursor.next();
+
+            try{
+                num = Integer.parseInt(doc.get(field).toString());
+
+                // Replace old value with updated value
+                doc.replace(field, num);
+
+                // replace old document with updated document via _id
+                coll.replaceOne(eq("_id", doc.get("_id")), doc);
+            }
+            catch (NumberFormatException e){
+                // if field is not header and is not a number, skip rest of instructions
+                System.err.println("Cannot convert to an integer.");
+            }
+        }
+        // close cursor
+        cursor.close();
+    }
+
+    /*
+    Converts Sentence to Integer
+    @param coll - mongo collection
+    @param field - column or field of collection
+ */
+    private void sentenceToInt(MongoCollection<Document> coll, String field){
+        MongoCursor<Document> cursor = coll.find().iterator();
+        cursor.next();  // skip the header
+        int year = 0;
+        Document doc;
+        while (cursor.hasNext()){
+            // retrieve current document
+            doc = cursor.next();
+
+            try{
+                year = Integer.parseInt(doc.get(field).toString().split(" ")[0]);
+
+                // ignore the 2 records with YEAR as a sentence
+                if (year < 2000) {
+                    // Replace old value with updated value
+                    doc.replace(field, year);
+
+                    // replace old document with updated document via _id
+                    coll.replaceOne(eq("_id", doc.get("_id")), doc);
+                }
+            }
+            catch (NumberFormatException e){
+                // ignore and skip record
+            }
+        }
+        // close cursor
+        cursor.close();
+    }
+
+    // Maps out race to respective integer value from data source
+    private void setRecordsRaceMap(){
+        records_race_map.put(1, "White");
+        records_race_map.put(2, "Black");
+        records_race_map.put(3, "Hispanic");
+        records_race_map.put(4, "Other");
+        records_race_map.put(9, "Missing");
+    }
+
+    // Maps out Offense_General (crime) to respective integer value from data source
+    private void setRecordsCrimeMap(){
+        records_crime_map.put(1, "Violent");
+        records_crime_map.put(2, "Property");
+        records_crime_map.put(3, "Drugs");
+        records_crime_map.put(4, "Public Order");
+        records_crime_map.put(5, "Other/Unspecified");
+        records_crime_map.put(9, "Missing");
+    }
+
+    private void normalizeRecords(MongoCollection<Document> coll, String field){
+        MongoCursor<Document> cursor = coll.find().iterator();
+        cursor.next();  // skip the header
+        Document doc;
+        while (cursor.hasNext()){
+            // retrieve current document
+            doc = cursor.next();
+
+            try{
+                if (field.equals("Race"))
+                    doc.replace(field, records_race_map.get(doc.get(field)));
+                else
+                    doc.replace(field, records_crime_map.get(doc.get(field)));
+                // replace old document with updated document via _id
+                coll.replaceOne(eq("_id", doc.get("_id")), doc);
+            }
+            catch (Exception e){
+                System.err.println("Failed to normalize data");
+            }
+        }
+        // close cursor
+        cursor.close();
     }
 }
+
 

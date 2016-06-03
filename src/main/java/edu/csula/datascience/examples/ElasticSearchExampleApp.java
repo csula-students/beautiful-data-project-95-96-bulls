@@ -189,7 +189,7 @@ public class ElasticSearchExampleApp {
             .setTypes(typeName)
             .setQuery(QueryBuilders.matchAllQuery())
             .addAggregation(
-                AggregationBuilders.terms("stateAgg").field("state")
+                AggregationBuilders.terms("stateAgg").field("state_of_potatos")
                     .size(Integer.MAX_VALUE)
             )
             .execute().actionGet();

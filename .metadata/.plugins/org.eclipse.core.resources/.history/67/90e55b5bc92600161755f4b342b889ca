@@ -1,0 +1,118 @@
+'''
+Created on May 29, 2016
+
+@author: Tazzie
+'''
+import os.path
+import urllib2
+import json
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+"""
+Acquire data and download them to local disk for faster future processing
+"""
+def acquireData():
+    print 'acquiring data'
+    file_num = 0
+    # acquire 1000 files
+    while (file_num < 1):
+        url = ("http://104.131.108.28:9000/api/vm/"+str(file_num)) 
+        print urllib2.urlopen(url).read()
+
+        #make request
+        request = urllib2.Request(url)
+        opener = urllib2.build_opener()
+        f = opener.open(request)   
+        #close request
+        opener.close()
+    
+        #get json response
+        json_data = json.load(f)
+        #j_string = byteify(json_data)
+        #pprint(j_string)
+        
+        #create file of json response for testing
+        file_out = open('resources/file'+str(file_num)+'.json', 'w')
+        file_out.writelines(json.dumps(json_data, indent=4, sort_keys=True))
+        file_num += 1
+    print "Done acquiring files"
+    
+"""
+Main code to process data and print out result
+"""
+def analyzeData(i):
+    print 'analyzing data'
+            
+    # read from csv and parse as DataFrame
+    f = pd.read_csv('resources/file0.json')
+    
+    # question 1 - stats don't change
+    if (i == 1):
+        print "question 1"
+
+        
+    
+    # question 2 What VM has highest average CPU usage?
+    if (i == 2):
+        print "question 2"
+        highest_num = 0
+        highest_file = 0
+        file_num = 0
+#         while (file_num < 1000):
+#             f = open('resources/file'+str(file_num)+'.json')
+#             json_data = json.load(f)
+#             for item in json_data['CPU']:
+#                 item_num = int(item)
+#                 if (item_num > highest_num):
+#                     highest_num = item_num
+#                     if (highest_file != file_num):
+#                         highest_file = file_num
+#                     print ("highest_num = ", highest_num, "file_num = ", file_num,
+#                            "highest_file = ", highest_file)
+#             file_num+=1
+#             print file_num
+    # question 3 Which VM, on average, has highest usage percentage of memory?
+    # (remember there is max memory field not just memory! and you will need to 
+    # do computation on memory divide by max memory to compute percentage)
+    if (i == 3):
+        print "question 3"
+    
+    # question 4 What is the 75% tile of MaxStorage across all VMs?
+    if (i == 4):
+        print "question 4"
+    
+    # question 5 Which VM has highest amount of network use in combine?
+    if (i == 5):
+        print "question 5"
+    
+    # question 6 Which VMs always has CPU usage of higher than 20%?
+    if (i == 6):
+        print "question 6"
+
+
+#used to get rid of first  JSON format
+def byteify(json_data):
+    if isinstance(json_data, dict):
+        return {byteify(key):byteify(value) for key,value in json_data.iteritems()}
+    elif isinstance(json_data, list):
+        return [byteify(element) for element in json_data]
+    elif isinstance(json_data, unicode):
+        return json_data.encode('utf-8')
+    else:
+        return json_data
+    
+
+
+def main():
+    # may comment out acquireData method as soon as you download data
+    acquireData()
+    
+    i = 1   # question number
+    while (i < 7):
+        analyzeData(i)
+        i += 1
+
+if __name__ == "__main__":
+    main()

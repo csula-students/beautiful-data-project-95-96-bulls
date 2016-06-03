@@ -1,0 +1,169 @@
+'''
+Created on May 29, 2016
+
+@author: Tazzie
+'''
+import os.path
+import urllib2
+import json
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from audioop import avg
+
+"""
+Acquire data and download them to local disk for faster future processing
+"""
+def acquireData():
+    print 'acquiring data'
+    file_num = 0
+    # acquire 1000 files
+    while (file_num < 1000):
+        data = json.load(urllib2.urlopen(("http://104.131.108.28:9000/api/vm/"+str(file_num))))
+
+        file_out = open('resources/file'+str(file_num)+'.json', 'w')
+        file_out.writelines(json.dumps(data, indent=4, sort_keys=True))
+        
+        file_num += 1
+    print "Done acquiring files"
+    
+"""
+Main code to process data and print out result
+"""
+def analyzeData():
+    print 'analyzing data'
+            
+    file_num = 0
+    
+    # question 1 variable
+    question_1_vm = -1
+    
+    # question 2 variables
+    highest_avg = -1
+    question_2_vm = -1
+
+    # question 3 variables
+    avg_memory_usage = 0.0
+    max_memory_usage = 0.0
+    question_3_vm = -1
+    
+    # question 4 variables
+    question_4_max_storage = 0
+    
+    # question 5 variables
+    max_network_use = 0
+    question_5_vm = -1
+    
+    # question 6 variables
+    question_6_list = []
+
+    while (file_num < 1000):
+        
+        data = pd.read_json(open('resources/file'+str(file_num)+'.json'))
+        
+        # question 1 handling
+        if question_1_handler(data):
+            question_1_vm = file_num
+        
+        # question 2 handling
+        index = 1
+        avg = 0
+        for cpu in data['CPU']:
+            avg += int(cpu)
+            index += 1
+        avg = avg / index
+        if (highest_avg < avg):
+            highest_avg = avg
+            question_2_vm = file_num
+            
+        # question 3 handling
+        avg_memory_usage = 0.0
+        index = 1
+        for memory in data['Memory']:
+            avg_memory_usage += memory
+        avg_memory_usage = avg_memory_usage / data['MaxMemory'][0]
+        if (max_memory_usage < avg_memory_usage):
+            max_memory_usage = avg_memory_usage
+            question_3_vm = file_num
+            print "MaxMemoryUsage=", max_memory_usage 
+            print 'question_3_vm=', question_3_vm
+        
+        # question 4 handling
+        question_4_max_storage += data['MaxMemory'][0]
+        
+        # question 5 handling
+        network_total = 0
+        for network in data['Network']:
+            network_total += network
+        if (max_network_use < network_total):
+            max_network_use = network_total
+            question_5_vm = file_num
+            
+        # question 6 handling
+        all_above_20 = True
+        for cpu in data['CPU']:
+            if (cpu <= 20):
+                all_above_20 = False
+        if all_above_20:
+            question_6_list.append(file_num)
+            
+        
+        file_num+=1
+    
+    # question 1 - stats don't change
+    print "question 1"
+    print "question1_vm = ", question_1_vm
+        
+    
+    # question 2 What VM has highest average CPU usage?
+    print "question 2"
+    print "highest_avg = ",highest_avg, "question_2_vm=", question_2_vm
+    
+    # question 3 Which VM, on average, has highest usage percentage of memory?
+    # (remember there is max memory field not just memory! and you will need to 
+    # do computation on memory divide by max memory to compute percentage)
+    print "question 3"
+    print "question_3_vm=", question_3_vm
+    
+    # question 4 What is the 75% tile of MaxStorage across all VMs?
+    print "question 4"
+    print question_4_max_storage / 1000 * 0.75
+    
+    # question 5 Which VM has highest amount of network use in combine?
+    print "question 5"
+    print "question_5_vm=", question_5_vm
+    
+    # question 6 Which VMs always has CPU usage of higher than 20%?
+    print "question 6"
+    for vm in question_6_list:
+        print vm
+
+def question_1_handler(data):
+    if not question_1_helper(data, 'CPU'):
+        return False
+    if not question_1_helper(data, 'Memory'):
+        return False
+    if not question_1_helper(data, 'Network'):
+        return False
+    if not question_1_helper(data, 'Storage'):
+        return False
+    return True
+            
+def question_1_helper(data, column):
+    row_value = 0
+    row_index = 0
+    for value in data[column]:
+        if (row_index > 0 and row_value != int(value)):
+            return False
+        row_value = int(value)
+        row_index+=1
+    return True
+
+def main():
+    # may comment out acquireData method as soon as you download data
+    #acquireData()
+    
+    analyzeData()
+
+if __name__ == "__main__":
+    main()
