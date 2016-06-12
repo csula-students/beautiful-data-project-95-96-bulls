@@ -1,10 +1,10 @@
 package edu.csula.datascience.examples;
 
 import com.google.gson.Gson;
-import jdk.nashorn.internal.parser.JSONParser;
-import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVParser;
-import org.elasticsearch.action.bulk.*;
+import org.elasticsearch.action.bulk.BackoffPolicy;
+import org.elasticsearch.action.bulk.BulkProcessor;
+import org.elasticsearch.action.bulk.BulkRequest;
+import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.Settings;
@@ -12,16 +12,16 @@ import org.elasticsearch.common.unit.ByteSizeUnit;
 import org.elasticsearch.common.unit.ByteSizeValue;
 import org.elasticsearch.common.unit.TimeValue;
 import org.elasticsearch.node.Node;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.URISyntaxException;
-import java.nio.charset.Charset;
 import java.util.Date;
 
 import static org.elasticsearch.node.NodeBuilder.nodeBuilder;
 
-public class ElasticSearch_Innocent {
+public class ElasticSearch_Innocent_JSON {
     private boolean DEBUG = true;
     private long myTime = new Date().getTime();
 
@@ -33,13 +33,13 @@ public class ElasticSearch_Innocent {
     private final String salaries_typeName = "salaries";
 
     // file names
-    private final String term_records_fileName = "Term_Records.csv";
-    private final String executions_fileName = "Executions.csv";
-    private final String exonerated_fileName = "Exonerated.csv";
-    private final String salaries_fileName = "Salaries.csv";
+    private final String term_records_fileName = "Term_Records.json";
+    private final String executions_fileName = "Executions.json";
+    private final String exonerated_fileName = "Exonerated.json";
+//    private final String salaries_fileName = "Salaries.csv";
 
     public static void main(String[] args) throws URISyntaxException{
-        ElasticSearch_Innocent tester = new ElasticSearch_Innocent();
+        ElasticSearch_Innocent_JSON tester = new ElasticSearch_Innocent_JSON();
         tester.driver();
     }
 
@@ -50,9 +50,9 @@ public class ElasticSearch_Innocent {
                 .put("path.home", "elasticsearch-data")).node();
         Client client = node.client();
 
-        getData(client, salaries_fileName, salaries_typeName);
+        //getData(client, salaries_fileName, salaries_typeName);
         getData(client, executions_fileName, executions_typeName);
-        getData(client, exonerated_fileName, exonerations_typeName);
+        //getData(client, exonerated_fileName, exonerations_typeName);
         //getData(client, term_records_fileName, term_records_typeName);
 
         myTime = new Date().getTime() - myTime;
@@ -71,7 +71,7 @@ public class ElasticSearch_Innocent {
 
         // as usual process to connect to data source, we will need to set up
         // node and client// to read CSV file from the resource folder
-        File csv = new File(
+        File json_file = new File(
                 ClassLoader.getSystemResource(fileName)
                         .toURI()
         );
@@ -113,85 +113,59 @@ public class ElasticSearch_Innocent {
         Gson gson = new Gson();
 
         try {
-            // after reading the csv file, we will use CSVParser to parse through
-            // the csv files
-            CSVParser parser = CSVParser.parse(
-                    csv,
-                    Charset.defaultCharset(),
-                    CSVFormat.EXCEL.withHeader()
-            );
+            BufferedReader br = new BufferedReader(new FileReader(json_file));
+            String line;
+            boolean firstLine = true;
+            while ((line = br.readLine()) != null) {
+                if (firstLine) {
+                    firstLine = false;
+                    continue;
+                }
+                JSONObject json_object = new JSONObject(line);
 
-            // for each record, we will insert data into Elastic Search
-            parser.forEach(record -> {
                 switch(fileName){
-                    case salaries_fileName:
-                        System.out.println("Name: "
-                                + record.get("EmployeeName")
-                        );
-                        Salary salary = new Salary(
-                                Long.parseLong(record.get("Id")),
-                                record.get("EmployeeName"),
-                                record.get("JobTitle"),
-                                parseSafe(record.get("BasePay")),
-                                parseSafe(record.get("OvertimePay")),
-                                parseSafe(record.get("OtherPay")),
-                                parseSafe(record.get("Benefits")),
-                                parseSafe(record.get("TotalPay")),
-                                parseSafe(record.get("TotalPayBenefits")),
-                                Integer.parseInt(record.get("Year").isEmpty() ? "1979" : record.get("Year")),
-                                record.get("Notes"),
-                                record.get("Agency"),
-                                record.get("Status")
-                        );
-                        bulkProcessor.add(new IndexRequest(indexName, typeName)
-                                .source(gson.toJson(salary))
-                        );
-                        break;
                     case exonerated_fileName:
-                        System.out.println("RecordNum: " + record.get("Id") + "\tState: "
-                                + record.get("State")
+                        System.out.println("RecordNum: " + json_object.get("Id") + "\tState: "
+                                + json_object.get("State")
                         );
                         Exonerated exonerate = new Exonerated(
-                                record.get("Id"),
-                                record.get("Race"),
-                                record.get("State"),
-                                record.get("Worst Crime Display"),
-                                Integer.parseInt(record.get("Convicted")),
-                                Integer.parseInt(record.get("Exonerated")),
-                                record.get("Sentence"),
-                                record.get("OM"),
-                                record.get("Region")
+                                json_object.get("Id").toString(),
+                                json_object.get("Race").toString(),
+                                json_object.get("State").toString(),
+                                json_object.get("Worst Crime Display").toString(),
+                                Integer.parseInt(json_object.get("Convicted").toString()),
+                                Integer.parseInt(json_object.get("Exonerated").toString()),
+                                json_object.get("Sentence").toString(),
+                                json_object.get("OM").toString(),
+                                json_object.get("Region").toString()
                         );
                         bulkProcessor.add(new IndexRequest(indexName, typeName)
                                 .source(gson.toJson(exonerate))
                         );
                         break;
                     case executions_fileName:
-                        System.out.println("Id/Date/Race/State: "
-                                + record.get("Id")
-                                + "/" + record.get("Date")
-                                + "/" + record.get("Race")
-                                + "/" + record.get("State")
-                                + "/" + record.get("Region")
+                        System.out.println("Date/Race/State: "
+                                + json_object.get("Year").toString()
+                                + "/" + json_object.get("Race").toString()
+                                + "/" + json_object.get("State").toString()
+                                + "/" + json_object.get("Region").toString()
                         );
                         Execution execute = new Execution(
-                                record.get("Id"),
-                                Integer.parseInt(record.get("Date")),
-                                Integer.parseInt(record.get("Age")),
-                                record.get("Race"),
-                                record.get("State"),
-                                record.get("Murder"),
-                                record.get("Region")
+                                Integer.parseInt(json_object.get("Year").toString()),
+                                Integer.parseInt(json_object.get("Age").toString()),
+                                json_object.get("Race").toString(),
+                                json_object.get("State").toString(),
+                                json_object.get("Crime").toString(),
+                                json_object.get("Region").toString()
                         );
                         bulkProcessor.add(new IndexRequest(indexName, typeName)
                                 .source(gson.toJson(execute))
                         );
                         break;
                     default:
-//Id	ABT_INMATE_ID	SEX	ADMTYPE	OFFGENERAL	ADMITYR	MAND_PRISREL_YEAR	PROJ_PRISREL_YEAR	PARELIG_YEAR	SENTLGTH	OFFDETAIL	RACE	AGEADMIT	AGERELEASE	TIMESRVD	RELTYPE	STATE	REGION
-
+                        // place holder for term_records
                 }
-            });
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -201,9 +175,7 @@ public class ElasticSearch_Innocent {
         return Double.parseDouble(value.isEmpty() || value.equals("Not Provided") ? "0" : value);
     }
 
-
     class Execution {
-        final String id;
         final int date;
         final int age;
         final String race;
@@ -211,8 +183,7 @@ public class ElasticSearch_Innocent {
         final String murder;
         final String region;
 
-        public Execution(String id, int date, int age, String race, String state, String murder, String region) {
-            this.id = id;
+        public Execution(int date, int age, String race, String state, String murder, String region) {
             this.date = date;
             this.age = age;
             this.race = race;

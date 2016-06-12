@@ -222,7 +222,8 @@ public class InnocentCollectorApp {
                 .append("Age_Release", rowDataArray[14])
                 .append("Time_Served", rowDataArray[15])
                 .append("Release_Type", rowDataArray[16])
-                .append("State", rowDataArray[17]);
+                .append("State", rowDataArray[17])
+                .append("Region", "REGION");
 
         // filter race
         if (!rowDataArray[12].isEmpty()) {
@@ -246,7 +247,8 @@ public class InnocentCollectorApp {
                 .append("Age", rowDataArray[2])
                 .append("Race", rowDataArray[4])
                 .append("State", rowDataArray[6])
-                .append("Crime", "Murder");
+                .append("Crime", "Murder")
+                .append("Region", "Region");
 
         // filter year
         if (!rowDataArray[0].isEmpty()){
@@ -272,7 +274,8 @@ public class InnocentCollectorApp {
                 .append("Convicted", rowDataArray[11])
                 .append("Exonerated", rowDataArray[12])
                 .append("Sentence", rowDataArray[13])
-                .append("OM", rowDataArray[20]);
+                .append("OM", rowDataArray[20])
+                .append("Region", "Region");
 
         // filter race
         if (!rowDataArray[3].isEmpty()){
@@ -785,7 +788,7 @@ public class InnocentCollectorApp {
         records_sentence_length_map.put("3", "5-9.9 years");
         records_sentence_length_map.put("4", "10-24.9 years");
         records_sentence_length_map.put("5", ">=25 years");
-        records_sentence_length_map.put("6", "Life, LWOP, Life plus additional years, Death");
+        records_sentence_length_map.put("6", "Life/LWOP/Life plus additional years/Death");
         records_sentence_length_map.put("9", "Missing");
         records_sentence_length_map.put("", "Missing");
         records_sentence_length_map.put(" ", "Missing");
@@ -803,7 +806,7 @@ public class InnocentCollectorApp {
         records_offense_detail_map.put("9", "Motor vehicle theft");
         records_offense_detail_map.put("10", "Fraud");
         records_offense_detail_map.put("11", "Other property offenses");
-        records_offense_detail_map.put("12", "Drugs (includes possession, distribution, trafficking, other)");
+        records_offense_detail_map.put("12", "Drugs (includes possession/distribution/trafficking/other)");
         records_offense_detail_map.put("13", "Public order");
         records_offense_detail_map.put("14", "Other/unspecified");
         records_offense_detail_map.put("99", "Missing");
@@ -836,7 +839,7 @@ public class InnocentCollectorApp {
     private void setReleaseTypeMap(){
         records_release_type_map.put("1", "Conditional release");
         records_age_release_map.put("2", "Unconditional release");
-        records_age_release_map.put("3", "Other release (including death, transfer, AWOL, escape)");
+        records_age_release_map.put("3", "Other release (including death/transfer/AWOL/escape)");
         records_age_release_map.put("9", "Missing");
         records_age_release_map.put("", "Missing");
         records_age_release_map.put(" ", "Missing");

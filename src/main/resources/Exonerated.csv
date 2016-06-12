@@ -1,0 +1,753 @@
+Id,Race,State,Worst Crime Display,Convicted,Exonerated,Sentence,OM,Region
+575c66e11c4d362864dd318a,Black,New York,Sexual Assault,1983,1999,20,OM,Northeast
+575c66e11c4d362864dd318b,White,Illinois,Murder,1987,2015,Life without parole,OM,Midwest
+575c66e11c4d362864dd318c,Hispanic,California,Manslaughter,1996,2001,12,OM,West
+575c66e11c4d362864dd318d,Black,Illinois,Murder,1978,1996,75,OM,Midwest
+575c66e11c4d362864dd318e,Black,Massachusetts,Murder,1974,2004,Death,OM,Northeast
+575c66e11c4d362864dd318f,White,Texas,Murder,1977,1989,Death,OM,South
+575c66e11c4d362864dd3190,Black,Louisiana,Murder,1983,2014,Life without parole,OM,South
+575c66e11c4d362864dd3191,Black,New York,Menacing,1998,1999,Not sentenced,OM,Northeast
+575c66e11c4d362864dd3192,Black,Connecticut,Murder,1999,2013,Life,OM,Northeast
+575c66e11c4d362864dd3193,Black,Illinois,Assault,2006,2006,Probation,OM,Midwest
+575c66e11c4d362864dd3194,Black,Illinois,Assault,2006,2006,Probation,OM,Midwest
+575c66e11c4d362864dd3195,Black,Maryland,Murder,1998,2005,30,OM,South
+575c66e11c4d362864dd3196,Hispanic,Illinois,Murder,1999,2003,55,OM,Midwest
+575c66e11c4d362864dd3197,Black,Ohio,Murder,1975,2014,Death,OM,Midwest
+575c66e11c4d362864dd3198,Hispanic,Texas,Murder,1982,1997,Death,OM,South
+575c66e11c4d362864dd3199,White,Ohio,Child Sex Abuse,1985,1997,Life,OM,Midwest
+575c66e11c4d362864dd319a,Hispanic,Texas,Sexual Assault,1990,1994,12,OM,South
+575c66e11c4d362864dd319b,Hispanic,New York,Child Sex Abuse,1985,1990,25,OM,Northeast
+575c66e11c4d362864dd319c,White,Washington,Murder,2002,2015,Life without parole,OM,West
+575c66e11c4d362864dd319e,Hispanic,Illinois,Drug Possession or Sale,2012,2013,6,OM,Midwest
+575c66e11c4d362864dd319f,Hispanic,California,Manslaughter,1996,2001,12,OM,West
+575c66e11c4d362864dd31a0,Hispanic,California,Manslaughter,1996,2001,12,OM,West
+575c66e11c4d362864dd31a1,Hispanic,California,Robbery,1995,2002,14,OM,West
+575c66e11c4d362864dd31a2,White,Massachusetts,Child Sex Abuse,1987,1998,20,OM,Northeast
+575c66e11c4d362864dd31a3,Black,Missouri,Murder,1986,2003,Death,OM,Midwest
+575c66e11c4d362864dd31a4,White,Illinois,Murder,1980,1982,2015,P/FA,Midwest
+575c66e11c4d362864dd31a5,White,Pennsylvania,Sexual Assault,2001,2011,5,OM,Northeast
+575c66e11c4d362864dd31a6,Black,Illinois,Murder,2002,2015,50,OM,Midwest
+575c66e11c4d362864dd31a7,Black,Illinois,Murder,1985,2008,Life,OM,Midwest
+575c66e11c4d362864dd31a8,Black,California,Murder,1994,1995,2011,P/FA,West
+575c66e11c4d362864dd31a9,Black,North Carolina,Murder,1995,2013,Life,OM,South
+575c66e11c4d362864dd31aa,White,Michigan,Sexual Assault,2006,2012,14,OM,Midwest
+575c66e11c4d362864dd31ab,Black,Connecticut,Murder,2000,2013,90,OM,Northeast
+575c66e11c4d362864dd31ac,Black,California,Murder,1987,2007,32,OM,West
+575c66e11c4d362864dd31ad,Black,California,Attempted Murder,1990,1998,28,OM,West
+575c66e11c4d362864dd31ae,Black,New York,Murder,1988,2014,18,OM,Northeast
+575c66e11c4d362864dd31af,Black,Maryland,Murder,1975,2002,Life,OM,South
+575c66e11c4d362864dd31b0,White,Wisconsin,Arson,2007,2013,3,OM,Midwest
+575c66e11c4d362864dd31b1,Black,Ohio,Murder,2000,2011,Life without parole,OM,Midwest
+575c66e11c4d362864dd31b2,Black,New York,Murder,1997,2013,25,OM,Northeast
+575c66e11c4d362864dd31b3,Other,New York,Child Sex Abuse,1989,1992,8,OM,Northeast
+575c66e11c4d362864dd31b4,White,Florida,Manslaughter,1997,2001,15,OM,South
+575c66e11c4d362864dd31b5,Black,Illinois,Drug Possession or Sale,2006,2016,18,OM,Midwest
+575c66e11c4d362864dd31b6,Black,Pennsylvania,Murder,1974,2002,Life,OM,Northeast
+575c66e11c4d362864dd31b7,White,Oklahoma,Assault,2009,2010,Life,OM,South
+575c66e11c4d362864dd31b8,White,Tennessee,Child Sex Abuse,1987,1993,5,OM,South
+575c66e11c4d362864dd31b9,White,New Mexico,Murder,1981,1993,9,OM,West
+575c66e11c4d362864dd31ba,Black,Alabama,Manslaughter,2001,2003,15,OM,South
+575c66e11c4d362864dd31bb,White,Massachusetts,Child Sex Abuse,1985,2009,Life,OM,Northeast
+575c66e11c4d362864dd31bd,Black,Illinois,Murder,1997,2011,85,OM,Midwest
+575c66e11c4d362864dd31be,Black,Mississippi,Robbery,1988,2010,50,OM,South
+575c66e11c4d362864dd31bf,Black,Illinois,Murder,1985,2015,20,OM,Midwest
+575c66e11c4d362864dd31c0,Black,New York,Murder,1984,2004,20,OM,Northeast
+575c66e11c4d362864dd31c1,Black,California,Sexual Assault,1987,1996,16,OM,West
+575c66e11c4d362864dd31c2,White,Illinois,Murder,1995,2009,50,OM,Midwest
+575c66e11c4d362864dd31c3,Black,Alabama,Murder,1989,1990,25,OM,South
+575c66e11c4d362864dd31c4,White,West Virginia,Murder,1993,2000,Life without parole,OM,South
+575c66e11c4d362864dd31c5,Hispanic,New York,Child Sex Abuse,1986,1989,25,OM,Northeast
+575c66e11c4d362864dd31c6,White,Kansas,Obstruction of Justice,2014,2014,Not sentenced,OM,Midwest
+575c66e11c4d362864dd31c7,Black,Ohio,Murder,1997,2003,15,OM,Midwest
+575c66e11c4d362864dd31c8,White,Ohio,Manslaughter,1999,2001,20,OM,Midwest
+575c66e11c4d362864dd31ca,Black,New York,Murder,1995,2011,25,OM,Northeast
+575c66e11c4d362864dd31cb,Black,Louisiana,Drug Possession or Sale,1979,2003,Life,OM,South
+575c66e11c4d362864dd31cc,Hispanic,New York,Murder,1992,2009,23,OM,Northeast
+575c66e11c4d362864dd31cd,White,New York,Murder,1986,1993,25,OM,Northeast
+575c66e11c4d362864dd31ce,Black,Louisiana,Child Sex Abuse,1987,2003,Life,OM,South
+575c66e11c4d362864dd31cf,Black,New York,Attempted Murder,1973,1995,25,OM,Northeast
+575c66e11c4d362864dd31d0,Black,Mississippi,Murder,1980,2010,Life,OM,South
+575c66e11c4d362864dd31d1,Black,Texas,Child Sex Abuse,1995,2009,40,OM,South
+575c66e11c4d362864dd31d2,Black,New York,Murder,1991,1998,36,OM,Northeast
+575c66e11c4d362864dd31d3,White,Kansas,Murder,2000,2015,Life,OM,Midwest
+575c66e11c4d362864dd31d4,White,Maryland,Murder,1985,1993,Death,OM,South
+575c66e11c4d362864dd31d5,Black,New York,Attempted Murder,2007,2014,40,OM,Northeast
+575c66e11c4d362864dd31d6,White,Texas,Theft,1992,1996,Probation,OM,South
+575c66e11c4d362864dd31d7,White,Pennsylvania,Manslaughter,1990,1993,5,OM,Northeast
+575c66e11c4d362864dd31d8,Black,Missouri,Murder,1986,2001,Life,OM,Midwest
+575c66e11c4d362864dd31d9,White,Virginia,Murder,1991,2013,Life,OM,South
+575c66e11c4d362864dd31db,Black,Illinois,Murder,1990,2013,82,OM,Midwest
+575c66e11c4d362864dd31dc,Black,New York,Attempted Murder,1984,2001,12,OM,Northeast
+575c66e11c4d362864dd31dd,Black,New York,Murder,1983,2009,20,OM,Northeast
+575c66e11c4d362864dd31de,Black,Illinois,Kidnapping,1988,2001,12,OM,Midwest
+575c66e11c4d362864dd31df,Black,District of Columbia,Sexual Assault,1992,2003,30,OM,South
+575c66e11c4d362864dd31e0,Black,Arkansas,Drug Possession or Sale,1996,2000,Life,OM,South
+575c66e11c4d362864dd31e1,Black,New York,Murder,1990,2002,25,OM,Northeast
+575c66e11c4d362864dd31e2,White,Arkansas,Murder,1995,1998,20,OM,South
+575c66e11c4d362864dd31e3,Black,Texas,Murder,1981,1990,Death,OM,South
+575c66e11c4d362864dd31e4,Hispanic,California,Sexual Assault,1990,1994,8,OM,West
+575c66e11c4d362864dd31e5,Black,Mississippi,Murder,1995,2008,Death,OM,South
+575c66e11c4d362864dd31e6,Black,Ohio,Murder,1975,2014,Death,OM,Midwest
+575c66e11c4d362864dd31e7,Black,Louisiana,Murder,1996,2004,Death,OM,South
+575c66e11c4d362864dd31e8,Black,Louisiana,Murder,1976,2003,Life,OM,South
+575c66e11c4d362864dd31e9,Black,Missouri,Sexual Assault,1983,2006,45,OM,Midwest
+575c66e11c4d362864dd31ea,White,Texas,Child Sex Abuse,1993,2010,5,OM,South
+575c66e11c4d362864dd31eb,White,Montana,Child Sex Abuse,1987,2002,40,OM,West
+575c66e11c4d362864dd31ec,Black,Mississippi,Murder,1992,2008,Life without parole,OM,South
+575c66e11c4d362864dd31ed,Black,Texas,Murder,2005,2015,Death,OM,South
+575c66e11c4d362864dd31ee,White,Utah,Murder,1995,2013,Life,OM,West
+575c66e11c4d362864dd31ef,Black,Louisiana,Sexual Assault,1985,2005,Life,OM,South
+575c66e11c4d362864dd31f0,Black,Texas,Murder,1980,1990,25,OM,South
+575c66e11c4d362864dd31f1,Black,North Carolina,Murder,1984,2014,Death,OM,South
+575c66e11c4d362864dd31f2,White,New York,Murder,1992,2007,25,OM,Northeast
+575c66e11c4d362864dd31f3,Black,Florida,Murder,1993,2003,Life,OM,South
+575c66e11c4d362864dd31f4,Black,Florida,Robbery,2007,2015,30,OM,South
+575c66e11c4d362864dd31f5,Black,California,Drug Possession or Sale,1997,2000,12,OM,West
+575c66e11c4d362864dd31f6,White,Oklahoma,Sexual Assault,1983,2003,85,OM,South
+575c66e11c4d362864dd31f7,White,Missouri,Murder,2002,2012,Life without parole,OM,Midwest
+575c66e11c4d362864dd31f8,Black,Arkansas,Drug Possession or Sale,1999,2010,Life,OM,South
+575c66e11c4d362864dd31f9,Black,New York,Sexual Assault,1999,2002,12,OM,Northeast
+575c66e11c4d362864dd31fa,White,Indiana,Murder,1996,2012,60,OM,Midwest
+575c66e11c4d362864dd31fb,White,Louisiana,Murder,1986,1992,Life without parole,OM,South
+575c66e11c4d362864dd31fc,Black,Maryland,Murder,1995,2014,Life,OM,South
+575c66e11c4d362864dd31fd,Black,Wisconsin,Murder,2011,2015,Life,OM,Midwest
+575c66e11c4d362864dd31ff,White,Louisiana,Murder,1987,2001,Death,OM,South
+575c66e11c4d362864dd3200,White,Illinois,Murder,1989,1996,Death,OM,Midwest
+575c66e11c4d362864dd3201,Black,New York,Murder,1994,2002,25,OM,Northeast
+575c66e11c4d362864dd3202,Black,Missouri,Murder,1985,2008,Life,OM,Midwest
+575c66e11c4d362864dd3203,Black,Mississippi,Murder,1990,1995,Death,OM,South
+575c66e11c4d362864dd3204,Black,Illinois,Murder,1989,2011,Life,OM,Midwest
+575c66e11c4d362864dd3206,Black,Illinois,Robbery,1991,1992,Not sentenced,OM,Midwest
+575c66e11c4d362864dd3207,Black,Illinois,Murder,1998,2016,55,OM,Midwest
+575c66e11c4d362864dd3208,White,Michigan,Murder,1988,1996,Life,OM,Midwest
+575c66e11c4d362864dd3209,White,Florida,Murder,1984,2010,Life,OM,South
+575c66e11c4d362864dd320b,White,Georgia,Murder,1994,2004,Life,OM,South
+575c66e11c4d362864dd320c,Hispanic,California,Murder,1992,2011,Life,OM,West
+575c66e11c4d362864dd320d,Black,Pennsylvania,Murder,1988,1996,Life,OM,Northeast
+575c66e11c4d362864dd320e,Black,Washington,Sexual Assault,2007,2013,14,OM,West
+575c66e11c4d362864dd320f,White,Virginia,Assault,1988,1992,14,OM,South
+575c66e11c4d362864dd3210,Hispanic,Illinois,Murder,1991,2001,48,OM,Midwest
+575c66e11c4d362864dd3211,Black,Illinois,Murder,1992,2000,35,OM,Midwest
+575c66e11c4d362864dd3213,Hispanic,Ohio,Child Sex Abuse,1991,1995,Life,OM,Midwest
+575c66e11c4d362864dd3214,Black,California,Murder,1975,1992,Life,OM,West
+575c66e11c4d362864dd3215,Black,North Carolina,Murder,1994,2008,Death,OM,South
+575c66e11c4d362864dd3216,Black,Louisiana,Sexual Assault,1980,1994,Life,OM,South
+575c66e11c4d362864dd3217,Black,Massachusetts,Sexual Assault,1984,2001,80,OM,Northeast
+575c66e11c4d362864dd3218,Black,Illinois,Sexual Assault,2004,2013,30,OM,Midwest
+575c66e11c4d362864dd3219,Other,California,Attempt,1995,1995,2002,P/FA,West
+575c66e11c4d362864dd321a,Black,Missouri,Murder,1987,2000,Death,OM,Midwest
+575c66e11c4d362864dd321b,White,Florida,Manslaughter,1997,2001,15,OM,South
+575c66e11c4d362864dd321c,Black,California,Murder,1994,2009,Life,OM,West
+575c66e11c4d362864dd321d,Black,Illinois,Sexual Assault,1995,2014,60,OM,Midwest
+575c66e11c4d362864dd321e,Black,New York,Murder,1995,2010,34,OM,Northeast
+575c66e11c4d362864dd321f,Hispanic,New York,Murder,1993,2011,50,OM,Northeast
+575c66e11c4d362864dd3220,White,Nevada,Possession of Stolen Property,2004,2015,10,OM,West
+575c66e11c4d362864dd3221,Black,Texas,Robbery,1966,2004,Life,OM,South
+575c66e11c4d362864dd3222,Black,California,Murder,1994,2011,Life without parole,OM,West
+575c66e11c4d362864dd3223,White,Massachusetts,Perjury,1998,2005,2,OM,Northeast
+575c66e11c4d362864dd3224,Black,Pennsylvania,Murder,1980,1990,Life,OM,Northeast
+575c66e11c4d362864dd3225,Black,New York,Kidnapping,1993,2015,12.5 to 25 years,OM,Northeast
+575c66e11c4d362864dd3226,Black,Virginia,Robbery,2010,2013,1,OM,South
+575c66e11c4d362864dd3227,Black,Florida,Murder,2002,2012,Life,OM,South
+575c66e11c4d362864dd3228,Hispanic,California,Drug Possession or Sale,1998,2003,7,OM,West
+575c66e11c4d362864dd3229,Black,New York,Murder,1997,2013,25,OM,Northeast
+575c66e11c4d362864dd322a,Black,Louisiana,Murder,1996,1999,Death,OM,South
+575c66e11c4d362864dd322b,White,Virginia,Murder,1991,2001,Life,OM,South
+575c66e11c4d362864dd322c,White,California,Drug Possession or Sale,1999,2001,6,OM,West
+575c66e11c4d362864dd322d,White,California,Child Sex Abuse,1985,1991,Unknown,OM,West
+575c66e11c4d362864dd322f,White,California,Child Sex Abuse,1985,2000,10,OM,West
+575c66e11c4d362864dd3230,Black,Maryland,Child Sex Abuse,1987,1991,10,OM,South
+575c66e11c4d362864dd3231,Black,Pennsylvania,Murder,1974,2002,Life,OM,Northeast
+575c66e11c4d362864dd3232,Black,South Carolina,Murder,2001,2012,Life,OM,South
+575c66e11c4d362864dd3233,Black,Illinois,Murder,1992,2000,20,OM,Midwest
+575c66e11c4d362864dd3234,Black,New York,Assault,1989,1999,10,OM,Northeast
+575c66e11c4d362864dd3235,Hispanic,California,Murder,1997,2001,41,OM,West
+575c66e11c4d362864dd3236,Hispanic,New York,Drug Possession or Sale,2007,2007,1,OM,Northeast
+575c66e11c4d362864dd3237,Hispanic,Arizona,Murder,1981,1995,Death,OM,West
+575c66e11c4d362864dd3238,Hispanic,Illinois,Murder,1985,1995,Death,OM,Midwest
+575c66e11c4d362864dd3239,White,Virginia,Assault,1997,2001,9,OM,South
+575c66e11c4d362864dd323a,White,Washington,Child Sex Abuse,1994,1997,46,OM,West
+575c66e11c4d362864dd323b,White,Washington,Child Sex Abuse,1994,1999,47,OM,West
+575c66e11c4d362864dd323c,Black,Texas,Drug Possession or Sale,1997,2000,35,OM,South
+575c66e11c4d362864dd323f,White,Pennsylvania,Murder,1984,1999,Life without parole,OM,Northeast
+575c66e11c4d362864dd3240,White,Wisconsin,Child Sex Abuse,1998,2007,16,OM,Midwest
+575c66e11c4d362864dd3241,White,Florida,Murder,1991,1992,Not sentenced,OM,South
+575c66e11c4d362864dd3242,White,Ohio,Murder,1989,2012,Death,OM,Midwest
+575c66e11c4d362864dd3243,White,District of Columbia,Murder,1975,2005,20,OM,South
+575c66e11c4d362864dd3244,White,Alabama,Murder,1996,2015,Life,OM,South
+575c66e11c4d362864dd3245,Black,North Carolina,Robbery,2001,2008,10,OM,South
+575c66e11c4d362864dd3246,White,Texas,Sexual Assault,1990,2002,Life,OM,South
+575c66e11c4d362864dd3247,Hispanic,California,Manslaughter,1996,2001,12,OM,West
+575c66e11c4d362864dd3248,White,Iowa,Sexual Assault,1990,1992,Not sentenced,OM,Midwest
+575c66e11c4d362864dd3249,White,West Virginia,Sexual Assault,1987,1995,10,OM,South
+575c66e11c4d362864dd324a,White,West Virginia,Sexual Assault,1986,1995,14,OM,South
+575c66e11c4d362864dd324b,Black,Louisiana,Murder,1993,2010,Life without parole,OM,South
+575c66e11c4d362864dd324d,Black,Illinois,Murder,1993,1997,2009,P/FA,Midwest
+575c66e11c4d362864dd324e,White,Texas,Sexual Assault,2013,2015,Probation,OM,South
+575c66e11c4d362864dd324f,Black,New York,Murder,1989,2013,25,OM,Northeast
+575c66e11c4d362864dd3252,White,Florida,Sexual Assault,1982,2004,30,OM,South
+575c66e11c4d362864dd3253,Black,Louisiana,Murder,1993,2010,Life without parole,OM,South
+575c66e11c4d362864dd3254,White,Ohio,Arson,1996,2007,10,OM,Midwest
+575c66e11c4d362864dd3255,White,Iowa,Sexual Assault,2005,2012,15,OM,Midwest
+575c66e11c4d362864dd3256,Black,District of Columbia,Murder,1992,2004,15,OM,South
+575c66e11c4d362864dd3257,White,Virginia,Sexual Assault,1977,2013,15,OM,South
+575c66e11c4d362864dd3258,White,Illinois,Drug Possession or Sale,1983,2001,6,OM,Midwest
+575c66e11c4d362864dd3259,White,California,Child Sex Abuse,1985,1991,Life,OM,West
+575c66e11c4d362864dd325b,White,Florida,Murder,1981,2008,Life,OM,South
+575c66e11c4d362864dd325c,White,Louisiana,Murder,1987,2003,Life,OM,South
+575c66e11c4d362864dd325d,White,Pennsylvania,Murder,1980,1994,Life,OM,Northeast
+575c66e11c4d362864dd325e,White,Georgia,Murder,1993,1997,Life,OM,South
+575c66e11c4d362864dd325f,Black,Mississippi,Murder,1980,2010,Life,OM,South
+575c66e11c4d362864dd3260,Black,Missouri,Murder,1985,2001,Life,OM,Midwest
+575c66e11c4d362864dd3261,White,Washington,Child Sex Abuse,1995,2000,10,OM,West
+575c66e11c4d362864dd3262,White,Washington,Child Sex Abuse,1995,2000,10,OM,West
+575c66e11c4d362864dd3263,Black,Delaware,Drug Possession or Sale,2013,2015,20,OM,South
+575c66e11c4d362864dd3264,White,New York,Robbery,1985,1990,9,OM,Northeast
+575c66e11c4d362864dd3265,Hispanic,Illinois,Sexual Assault,1990,2002,9,OM,Midwest
+575c66e11c4d362864dd3266,Hispanic,California,Assault,2006,2006,Not sentenced,OM,West
+575c66e11c4d362864dd3267,Black,Indiana,Murder,1992,2016,60,OM,Midwest
+575c66e11c4d362864dd3268,Black,Oklahoma,Murder,1995,2009,Death,OM,South
+575c66e11c4d362864dd3269,White,Texas,Child Sex Abuse,1986,1989,Life,OM,South
+575c66e11c4d362864dd326a,White,Alabama,Child Sex Abuse,1992,2001,20,OM,South
+575c66e11c4d362864dd326b,White,Wyoming,Murder,2011,2013,Life,OM,West
+575c66e11c4d362864dd326c,Black,Massachusetts,Murder,1989,2003,Life,OM,Northeast
+575c66e11c4d362864dd326d,White,Texas,Child Sex Abuse,1992,2011,20,OM,South
+575c66e11c4d362864dd326e,White,California,Traffic Offense,2009,2012,License suspension,OM,West
+575c66e11c4d362864dd326f,Black,New York,Murder,1973,2000,25,OM,Northeast
+575c66e11c4d362864dd3270,White,District of Columbia,Murder,1975,2005,20,OM,South
+575c66e11c4d362864dd3271,Hispanic,Massachusetts,Murder,1996,2015,Life without parole,OM,Northeast
+575c66e11c4d362864dd3272,Black,Illinois,Murder,1996,2012,Life without parole,OM,Midwest
+575c66e11c4d362864dd3273,White,Texas,Murder,1982,2007,55,OM,South
+575c66e11c4d362864dd3274,Black,Alabama,Sexual Assault,2013,2014,85,OM,South
+575c66e11c4d362864dd3275,Black,Illinois,Murder,1996,2001,55,OM,Midwest
+575c66e11c4d362864dd3277,Other,Massachusetts,Assault,1970,1990,Probation,OM,Northeast
+575c66e11c4d362864dd3278,White,Missouri,Kidnapping,1991,2010,90,OM,Midwest
+575c66e11c4d362864dd3279,White,South Dakota,Manslaughter,2001,2015,25,OM,Midwest
+575c66e11c4d362864dd327a,White,Ohio,Sexual Assault,1990,1994,5,OM,Midwest
+575c66e11c4d362864dd327b,White,Iowa,Murder,2003,2006,Life without parole,OM,Midwest
+575c66e11c4d362864dd327c,Black,Texas,Sexual Assault,1987,2009,Life,OM,South
+575c66e11c4d362864dd327d,Black,Illinois,Murder,1976,2003,Life,OM,Midwest
+575c66e11c4d362864dd327e,White,Washington,Child Sex Abuse,1994,1998,23,OM,West
+575c66e11c4d362864dd327f,White,Washington,Child Sex Abuse,1994,1998,4,OM,West
+575c66e11c4d362864dd3280,White,Idaho,Murder,1983,2001,Death,OM,West
+575c66e11c4d362864dd3281,White,Missouri,Murder,2013,2015,Life without parole,OM,Midwest
+575c66e11c4d362864dd3282,White,California,Kidnapping,1999,2000,2003,P/FA,West
+575c66e11c4d362864dd3283,Black,Illinois,Murder,1986,2009,Life,OM,Midwest
+575c66e11c4d362864dd3284,Black,New York,Attempted Murder,2004,2010,12,OM,Northeast
+575c66e11c4d362864dd3285,White,Missouri,Murder,2005,2013,40,OM,Midwest
+575c66e11c4d362864dd3288,Black,Illinois,Murder,1986,2009,Death,OM,Midwest
+575c66e11c4d362864dd3289,Hispanic,New York,Filing a False Report,1997,2004,Community service,OM,Northeast
+575c66e11c4d362864dd328a,White,Maine,Sexual Assault,2009,2015,Not sentenced,OM,Northeast
+575c66e11c4d362864dd328d,Black,New York,Murder,1990,2014,25,OM,Northeast
+575c66e11c4d362864dd328e,Hispanic,Texas,Assault,2010,2015,3,OM,South
+575c66e11c4d362864dd328f,Black,Louisiana,Murder,1984,2014,Death,OM,South
+575c66e11c4d362864dd3290,White,California,Child Sex Abuse,1985,1991,Life,OM,West
+575c66e11c4d362864dd3291,White,California,Child Sex Abuse,1985,1991,Life,OM,West
+575c66e11c4d362864dd3292,Black,New York,Murder,2009,2015,25,OM,Northeast
+575c66e11c4d362864dd3293,Other,Alaska,Murder,1999,2015,40,OM,West
+575c66e11c4d362864dd3294,White,Oklahoma,Murder,1988,1999,Life,OM,South
+575c66e11c4d362864dd3295,White,Illinois,Murder,1989,1996,23,OM,Midwest
+575c66e11c4d362864dd3296,Hispanic,California,Assault,2006,2006,Not sentenced,OM,West
+575c66e11c4d362864dd3297,Black,Michigan,Murder,2009,2010,Life,OM,Midwest
+575c66e11c4d362864dd3298,White,Pennsylvania,Arson,1985,1992,22,OM,Northeast
+575c66e11c4d362864dd3299,Hispanic,California,Child Sex Abuse,2008,2011,15,OM,West
+575c66e11c4d362864dd329a,Black,California,Murder,1994,2008,Life without parole,OM,West
+575c66e11c4d362864dd329b,Hispanic,New York,Murder,1993,2007,25,OM,Northeast
+575c66e11c4d362864dd329c,Black,Illinois,Murder,1995,2014,30,OM,Midwest
+575c66e11c4d362864dd329e,Black,District of Columbia,Murder,1982,2009,20,OM,South
+575c66e11c4d362864dd329f,Black,District of Columbia,Murder,1994,2015,36,OM,South
+575c66e11c4d362864dd32a0,White,Illinois,Murder,1993,1996,Death,OM,Midwest
+575c66e11c4d362864dd32a1,White,Washington,Child Sex Abuse,1995,2000,23,OM,West
+575c66e11c4d362864dd32a2,Hispanic,Illinois,Murder,2001,2003,Life,OM,Midwest
+575c66e11c4d362864dd32a3,White,North Carolina,Murder,1998,2004,Death,OM,South
+575c66e11c4d362864dd32a4,White,New York,Murder,1988,2005,20,OM,Northeast
+575c66e11c4d362864dd32a5,Black,Louisiana,Murder,1968,1993,Life,OM,South
+575c66e11c4d362864dd32a6,Black,Texas,Sexual Assault,1983,2007,30,OM,South
+575c66e11c4d362864dd32a7,White,New York,Fraud,2008,2011,90,OM,Northeast
+575c66e11c4d362864dd32a9,Black,Pennsylvania,Murder,1995,2007,Life,OM,Northeast
+575c66e11c4d362864dd32aa,White,Pennsylvania,Sexual Assault,1987,2002,10,OM,Northeast
+575c66e11c4d362864dd32ab,Black,California,Murder,1990,2003,27,OM,West
+575c66e11c4d362864dd32ad,White,California,Murder,1980,2004,25,OM,West
+575c66e11c4d362864dd32ae,Hispanic,California,Assault,2006,2007,Not sentenced,OM,West
+575c66e11c4d362864dd32af,Hispanic,South Dakota,Child Sex Abuse,1999,2001,1,OM,Midwest
+575c66e11c4d362864dd32b0,Black,Illinois,Theft,2002,2008,9,OM,Midwest
+575c66e11c4d362864dd32b1,Black,Indiana,Murder,1993,1995,2012,P/FA,Midwest
+575c66e11c4d362864dd32b2,Black,New York,Child Sex Abuse,1986,1997,45,OM,Northeast
+575c66e11c4d362864dd32b3,White,California,Child Sex Abuse,1985,1990,16,OM,West
+575c66e11c4d362864dd32b4,White,Louisiana,Murder,1987,2000,Death,OM,South
+575c66e11c4d362864dd32b5,Hispanic,California,Murder,1987,1991,32,OM,West
+575c66e11c4d362864dd32b6,Hispanic,California,Murder,1987,1993,45,OM,West
+575c66e11c4d362864dd32b7,Black,District of Columbia,Murder,2006,2011,42,OM,South
+575c66e11c4d362864dd32b8,Black,Texas,Murder,1994,2010,Death,OM,South
+575c66e11c4d362864dd32b9,Black,Maryland,Murder,1991,1999,Life,OM,South
+575c66e11c4d362864dd32ba,Black,Illinois,Murder,1978,2002,50,OM,Midwest
+575c66e11c4d362864dd32bb,White,Massachusetts,Murder,1968,2001,Death,OM,Northeast
+575c66e11c4d362864dd32bc,Black,Illinois,Assault,2010,2011,Probation,OM,Midwest
+575c66e11c4d362864dd32bd,White,Washington,Child Sex Abuse,1995,1999,23,OM,West
+575c66e11c4d362864dd32be,Black,Texas,Sexual Assault,1983,2010,75,OM,South
+575c66e11c4d362864dd32bf,Black,California,Murder,1984,2008,33,OM,West
+575c66e11c4d362864dd32c0,Black,New York,Murder,1985,2006,15,OM,Northeast
+575c66e11c4d362864dd32c1,Other,Alaska,Harassment,2014,2015,Probation,OM,West
+575c66e11c4d362864dd32c2,Black,Kentucky,Sexual Assault,1993,2000,70,OM,South
+575c66e11c4d362864dd32c4,Black,Missouri,Murder,1988,2013,Death,OM,Midwest
+575c66e11c4d362864dd32c5,White,New York,Attempted Murder,1996,2006,12,OM,Northeast
+575c66e11c4d362864dd32c6,Black,California,Murder,1994,2005,Life,OM,West
+575c66e11c4d362864dd32c7,Black,New York,Murder,1972,1994,20,OM,Northeast
+575c66e11c4d362864dd32c8,Black,Ohio,Murder,1993,1995,Life,OM,Midwest
+575c66e11c4d362864dd32c9,Black,Massachusetts,Murder,1972,2008,Life without parole,OM,Northeast
+575c66e11c4d362864dd32ca,White,Missouri,Murder,2009,2013,20,OM,Midwest
+575c66e11c4d362864dd32cb,White,New York,Murder,1986,2005,33,OM,Northeast
+575c66e11c4d362864dd32cc,Black,New York,Murder,1992,2015,25,OM,Northeast
+575c66e11c4d362864dd32cd,Black,Illinois,Sexual Assault,1982,2011,60,OM,Midwest
+575c66e11c4d362864dd32ce,White,California,Murder,1980,2015,Life without parole,OM,West
+575c66e11c4d362864dd32d0,White,Iowa,Sexual Assault,1990,1992,Not sentenced,OM,Midwest
+575c66e11c4d362864dd32d1,Black,Illinois,Murder,1995,2011,80,OM,Midwest
+575c66e11c4d362864dd32d2,Black,Massachusetts,Assault,1990,1998,10,OM,Northeast
+575c66e11c4d362864dd32d3,Black,Illinois,Murder,2002,2007,25,OM,Midwest
+575c66e11c4d362864dd32d4,Black,Iowa,Murder,1978,2003,Life,OM,Midwest
+575c66e11c4d362864dd32d5,Black,Ohio,Murder,1999,2000,7,OM,Midwest
+575c66e11c4d362864dd32d6,Black,Illinois,Attempted Murder,1979,2003,50,OM,Midwest
+575c66e11c4d362864dd32d7,Black,Illinois,Murder,2005,2013,30,OM,Midwest
+575c66e11c4d362864dd32d8,Black,West Virginia,Sexual Assault,1987,1995,10,OM,South
+575c66e11c4d362864dd32d9,White,Texas,Child Sex Abuse,1992,2005,40,OM,South
+575c66e11c4d362864dd32da,White,Virginia,Murder,2001,2012,Life without parole,OM,South
+575c66e11c4d362864dd32db,Black,Michigan,Sexual Assault,1998,2008,25,OM,Midwest
+575c66e11c4d362864dd32dc,Black,Louisiana,Murder,1998,2007,Life,OM,South
+575c66e11c4d362864dd32dd,White,Nevada,Child Sex Abuse,1993,2007,Life,OM,West
+575c66e11c4d362864dd32de,White,Florida,Murder,1996,2007,Life,OM,South
+575c66e11c4d362864dd32df,White,Michigan,Accessory to Murder,1989,2002,3,OM,Midwest
+575c66e11c4d362864dd32e0,White,Missouri,Murder,1996,2011,Life without parole,OM,Midwest
+575c66e11c4d362864dd32e1,Black,Connecticut,Murder,1999,2013,Life,OM,Northeast
+575c66e11c4d362864dd32e2,Hispanic,Illinois,Murder,1985,1995,Death,OM,Midwest
+575c66e11c4d362864dd32e3,Hispanic,Texas,Murder,1994,2006,99,OM,South
+575c66e11c4d362864dd32e4,Hispanic,New York,Murder,1992,2005,25,OM,Northeast
+575c66e11c4d362864dd32e5,Black,Illinois,Murder,1994,2005,Life without parole,OM,Midwest
+575c66e11c4d362864dd32e6,Black,Indiana,Sexual Assault,1982,2009,35,OM,Midwest
+575c66e11c4d362864dd32e7,Black,Massachusetts,Murder,1996,2002,Life without parole,OM,Northeast
+575c66e11c4d362864dd32e8,Black,New York,Murder,1988,2014,18,OM,Northeast
+575c66e11c4d362864dd32e9,Black,Illinois,Murder,1990,2003,Death,OM,Midwest
+575c66e11c4d362864dd32ea,Black,Texas,Robbery,2013,2015,10,OM,South
+575c66e11c4d362864dd32eb,Black,North Carolina,Murder,1996,2007,Death,OM,South
+575c66e11c4d362864dd32ec,Black,Illinois,Sexual Assault,1997,2003,90,OM,Midwest
+575c66e11c4d362864dd32ed,Black,Florida,Murder,1987,2003,Death,OM,South
+575c66e11c4d362864dd32ee,White,Virginia,Sexual Assault,1985,1994,Life,OM,South
+575c66e11c4d362864dd32ef,Black,Illinois,Murder,1996,2015,75,OM,Midwest
+575c66e11c4d362864dd32f0,Black,New York,Gun Possession or Sale,2013,2015,1,OM,Northeast
+575c66e11c4d362864dd32f2,Black,Illinois,Murder,1984,1987,2003,P/FA,Midwest
+575c66e11c4d362864dd32f3,Black,Ohio,Murder,1977,2003,Death,OM,Midwest
+575c66e11c4d362864dd32f4,White,California,Child Sex Abuse,1985,1995,Life,OM,West
+575c66e11c4d362864dd32f5,Black,Louisiana,Murder,1967,1993,Death,OM,South
+575c66e11c4d362864dd32f6,Black,Maryland,Robbery,2004,2013,25,OM,South
+575c66e11c4d362864dd32f7,Black,North Carolina,Murder,1985,2004,Life,OM,South
+575c66e11c4d362864dd32f8,Black,West Virginia,Murder,1998,2014,Life,OM,South
+575c66e11c4d362864dd32f9,Black,North Carolina,Conspiracy,2003,2015,3,OM,South
+575c66e11c4d362864dd32fb,Black,Ohio,Murder,1975,2014,Death,OM,Midwest
+575c66e11c4d362864dd32fc,Black,New York,Murder,1980,1994,25,OM,Northeast
+575c66e11c4d362864dd32fe,Black,Ohio,Murder,1977,2003,Death,OM,Midwest
+575c66e11c4d362864dd32ff,Black,New York,Drug Possession or Sale,1990,1992,1,OM,Northeast
+575c66e11c4d362864dd3300,Black,Ohio,Murder,1985,2005,Death,OM,Midwest
+575c66e11c4d362864dd3301,Black,North Carolina,Sexual Assault,1982,1991,Life,OM,South
+575c66e11c4d362864dd3302,Black,New York,Murder,1988,2014,18,OM,Northeast
+575c66e11c4d362864dd3304,Black,Illinois,Murder,1985,1996,Death,OM,Midwest
+575c66e11c4d362864dd3305,Black,California,Sexual Assault,1992,2002,24,OM,West
+575c66e11c4d362864dd3306,Black,Louisiana,Murder,1986,2010,Life,OM,South
+575c66e11c4d362864dd3307,Black,Illinois,Murder,2007,2014,47,OM,Midwest
+575c66e11c4d362864dd3308,Black,Texas,Child Sex Abuse,1996,2009,Life,OM,South
+575c66e11c4d362864dd3309,Black,Connecticut,Murder,2007,2015,38,OM,Northeast
+575c66e11c4d362864dd330a,Black,Massachusetts,Murder,1996,2000,18,OM,Northeast
+575c66e11c4d362864dd330b,Black,Connecticut,Murder,2001,2013,75,OM,Northeast
+575c66e11c4d362864dd330c,Black,Illinois,Murder,1991,2004,30,OM,Midwest
+575c66e11c4d362864dd330e,Black,New York,Attempted Murder,2007,2014,40,OM,Northeast
+575c66e11c4d362864dd330f,Black,Illinois,Murder,2002,2015,50,OM,Midwest
+575c66e11c4d362864dd3310,Black,New York,Robbery,2010,2013,5,OM,Northeast
+575c66e11c4d362864dd3311,Black,New York,Murder,1983,1993,15,OM,Northeast
+575c66e11c4d362864dd3312,Black,Louisiana,Sexual Assault,1983,2008,Life without parole,OM,South
+575c66e11c4d362864dd3313,Other,Washington,Murder,2003,2005,43,OM,West
+575c66e11c4d362864dd3314,White,Ohio,Murder,1984,1990,Death,OM,Midwest
+575c66e11c4d362864dd3315,White,Ohio,Murder,1995,2014,Life,OM,Midwest
+575c66e11c4d362864dd3316,Black,Michigan,Murder,2006,2014,Life without parole,OM,Midwest
+575c66e11c4d362864dd3317,Black,North Carolina,Murder,1993,2008,Death,OM,South
+575c66e11c4d362864dd3318,Black,New York,Murder,2002,2007,37,OM,Northeast
+575c66e11c4d362864dd3319,Black,Illinois,Murder,1983,1989,Life without parole,OM,Midwest
+575c66e11c4d362864dd331a,Black,Illinois,Murder,1989,1999,Death,OM,Midwest
+575c66e11c4d362864dd331c,Black,Maryland,Murder,1999,2010,Life,OM,South
+575c66e11c4d362864dd331d,White,Indiana,Arson,2003,2010,15,OM,Midwest
+575c66e11c4d362864dd331e,Black,North Carolina,Murder,2001,2011,12,OM,South
+575c66e11c4d362864dd331f,White,New Jersey,Murder,1988,2010,Life,OM,Northeast
+575c66e11c4d362864dd3321,White,North Carolina,Child Sex Abuse,1992,1997,Life,OM,South
+575c66e11c4d362864dd3322,White,Missouri,Murder,1994,2009,30,OM,Midwest
+575c66e11c4d362864dd3323,White,New York,Assault,1999,2008,7,OM,Northeast
+575c66e11c4d362864dd3324,White,California,Murder,1986,2002,32,OM,West
+575c66e11c4d362864dd3325,White,Kentucky,Manslaughter,2008,2014,10,OM,South
+575c66e11c4d362864dd3326,Black,New York,Arson,1990,1992,18,OM,Northeast
+575c66e11c4d362864dd3327,White,Pennsylvania,Robbery,2003,2006,3,OM,Northeast
+575c66e11c4d362864dd3328,Black,Illinois,Murder,1990,2009,Death,OM,Midwest
+575c66e11c4d362864dd3329,Black,Illinois,Murder,1999,2002,35,OM,Midwest
+575c66e11c4d362864dd332a,White,Illinois,Murder,1989,2012,Life,OM,Midwest
+575c66e11c4d362864dd332b,Black,Louisiana,Murder,1979,1991,Life,OM,South
+575c66e11c4d362864dd332c,White,California,Child Sex Abuse,1984,1996,Life,OM,West
+575c66e11c4d362864dd332d,White,California,Child Sex Abuse,1984,1996,Life,OM,West
+575c66e11c4d362864dd332e,Black,New Jersey,Murder,1990,2001,30,OM,Northeast
+575c66e11c4d362864dd332f,White,New York,Murder,1986,2005,33,OM,Northeast
+575c66e11c4d362864dd3330,White,Montana,Sexual Assault,1990,2003,30,OM,West
+575c66e11c4d362864dd3331,White,New York,Sexual Assault,1982,1992,25,OM,Northeast
+575c66e11c4d362864dd3333,White,Arizona,Murder,1992,2002,Death,OM,West
+575c66e11c4d362864dd3334,White,Washington,Murder,1997,2001,Life without parole,OM,West
+575c66e11c4d362864dd3335,Black,Louisiana,Murder,1984,1998,Death,OM,South
+575c66e11c4d362864dd3337,White,New York,Sexual Assault,2004,2007,8,OM,Northeast
+575c66e11c4d362864dd3338,Black,North Carolina,Murder,1993,2013,Life,OM,South
+575c66e11c4d362864dd3339,White,New Jersey,Murder,1977,1998,Life,OM,Northeast
+575c66e11c4d362864dd333a,Hispanic,New York,Murder,1993,1996,20,OM,Northeast
+575c66e11c4d362864dd333b,White,Connecticut,Murder,1992,2015,Life without parole,OM,Northeast
+575c66e11c4d362864dd333d,Black,Ohio,Murder,1986,2006,Life without parole,OM,Midwest
+575c66e11c4d362864dd333e,White,California,Other Nonviolent Felony,1999,2014,28,OM,West
+575c66e11c4d362864dd333f,White,Oregon,Murder,2005,2014,Life,OM,West
+575c66e11c4d362864dd3341,Other,Pennsylvania,Murder,1988,2004,Life,OM,Northeast
+575c66e11c4d362864dd3342,Black,Michigan,Sexual Assault,2007,2010,15,OM,Midwest
+575c66e11c4d362864dd3343,White,Georgia,Murder,1987,2015,Death,OM,South
+575c66e11c4d362864dd3344,White,New York,Murder,1990,2002,20,OM,Northeast
+575c66e11c4d362864dd3345,Black,Ohio,Murder,1995,2014,21,OM,Midwest
+575c66e11c4d362864dd3346,Hispanic,New York,Murder,1992,2007,25,OM,Northeast
+575c66e11c4d362864dd3347,White,Arizona,Assault,2013,2014,Probation,OM,West
+575c66e11c4d362864dd3348,Black,Connecticut,Murder,1995,2015,120,OM,Northeast
+575c66e11c4d362864dd3349,White,Massachusetts,Murder,1968,2001,Death,OM,Northeast
+575c66e11c4d362864dd334a,White,Alaska,Murder,2007,2012,99,OM,West
+575c66e11c4d362864dd334b,White,Illinois,Murder,1982,1992,40,OM,Midwest
+575c66e11c4d362864dd334c,White,California,Murder,1985,2009,16,OM,West
+575c66e11c4d362864dd334e,Black,Illinois,Murder,1982,2008,Life,OM,Midwest
+575c66e11c4d362864dd334f,Black,New York,Murder,1999,2014,25,OM,Northeast
+575c66e11c4d362864dd3350,Black,District of Columbia,Murder,2005,2013,25,OM,South
+575c66e11c4d362864dd3351,Hispanic,New York,Murder,1990,2014,25,OM,Northeast
+575c66e11c4d362864dd3352,Black,Michigan,Murder,1982,2001,Life,OM,Midwest
+575c66e11c4d362864dd3353,White,Texas,Murder,1989,1994,Life,OM,South
+575c66e11c4d362864dd3354,White,Kansas,Sexual Assault,1982,2003,11,OM,Midwest
+575c66e11c4d362864dd3355,Black,New York,Murder,1987,1989,24,OM,Northeast
+575c66e11c4d362864dd3356,Black,Maryland,Murder,1994,2007,Life,OM,South
+575c66e11c4d362864dd3359,White,New York,Bribery,1989,1994,2,OM,Northeast
+575c66e11c4d362864dd335a,Black,Mississippi,Murder,1996,2015,Death,OM,South
+575c66e11c4d362864dd335b,White,Tennessee,Murder,1990,1996,Life,OM,South
+575c66e11c4d362864dd335c,Black,District of Columbia,Manslaughter,1984,2014,15,OM,South
+575c66e11c4d362864dd335d,Hispanic,Florida,Murder,1997,2001,Death,OM,South
+575c66e11c4d362864dd335e,White,Pennsylvania,Murder,1984,1999,Life without parole,OM,Northeast
+575c66e11c4d362864dd335f,Black,North Carolina,Kidnapping,1999,2010,11,OM,South
+575c66e11c4d362864dd3360,White,Colorado,Murder,1999,2008,Life,OM,West
+575c66e11c4d362864dd3361,Black,Louisiana,Murder,1999,2004,Death,OM,South
+575c66e11c4d362864dd3362,Black,Indiana,Sexual Assault,1982,2001,80,OM,Midwest
+575c66e11c4d362864dd3363,White,California,Fraud,2004,2011,Probation,OM,West
+575c66e11c4d362864dd3364,Black,New York,Murder,1986,2014,25,OM,Northeast
+575c66e11c4d362864dd3365,White,Oklahoma,Murder,1986,2007,Death,OM,South
+575c66e11c4d362864dd3366,Black,Ohio,Murder,1995,2006,18,OM,Midwest
+575c66e11c4d362864dd3367,White,New Mexico,Murder,2001,2008,Life,OM,West
+575c66e11c4d362864dd3368,Black,Michigan,Murder,2006,2007,Life,OM,Midwest
+575c66e11c4d362864dd3369,Black,North Carolina,Murder,1984,2014,Death,OM,South
+575c66e11c4d362864dd336a,White,Pennsylvania,Murder,1983,1995,Life,OM,Northeast
+575c66e11c4d362864dd336b,Black,Virginia,Murder,1993,1994,43,OM,South
+575c66e11c4d362864dd336c,Black,Arizona,Murder,1993,1997,Death,OM,West
+575c66e11c4d362864dd336d,White,California,Child Sex Abuse,1984,1996,Life,OM,West
+575c66e11c4d362864dd336e,White,California,Child Sex Abuse,1984,1996,Life,OM,West
+575c66e11c4d362864dd336f,Black,Iowa,Murder,1978,2011,Life,OM,Midwest
+575c66e11c4d362864dd3370,Black,Missouri,Robbery,2013,2015,12,OM,Midwest
+575c66e11c4d362864dd3373,Black,Alabama,Murder,1988,1993,Death,OM,South
+575c66e11c4d362864dd3374,White,New York,Fraud,2008,2011,90,OM,Northeast
+575c66e11c4d362864dd3375,Hispanic,Florida,Murder,1984,2002,Death,OM,South
+575c66e11c4d362864dd3376,White,California,Murder,1998,2014,Life without parole,OM,West
+575c66e11c4d362864dd3377,Hispanic,California,Manslaughter,1996,2001,12,OM,West
+575c66e11c4d362864dd3378,White,California,Murder,1991,1995,Life,OM,West
+575c66e11c4d362864dd3379,Black,Louisiana,Murder,1993,2010,Life without parole,OM,South
+575c66e11c4d362864dd337a,White,New Jersey,Child Sex Abuse,1988,1994,47,OM,Northeast
+575c66e11c4d362864dd337b,Black,Texas,Murder,1995,2012,60,OM,South
+575c66e11c4d362864dd337c,White,Arizona,Murder,1990,2015,Death,OM,West
+575c66e11c4d362864dd337d,White,Connecticut,Murder,1973,1989,25,OM,Northeast
+575c66e11c4d362864dd337e,White,California,Child Sex Abuse,1985,1991,Life,OM,West
+575c66e11c4d362864dd337f,Black,Utah,Robbery,2004,2007,5,OM,West
+575c66e11c4d362864dd3380,White,Texas,Murder,1989,1994,Life,OM,South
+575c66e11c4d362864dd3383,White,Florida,Manslaughter,1997,2001,15,OM,South
+575c66e11c4d362864dd3384,Black,North Carolina,Murder,2000,2001,2015,P/FA,South
+575c66e11c4d362864dd3385,Black,Arizona,Murder,1993,2002,Death,OM,West
+575c66e11c4d362864dd3387,Hispanic,California,Murder,1983,2009,Life,OM,West
+575c66e11c4d362864dd3388,Black,New York,Drug Possession or Sale,2007,2008,Not sentenced,OM,Northeast
+575c66e11c4d362864dd3389,Black,District of Columbia,Murder,1994,2015,36,OM,South
+575c66e11c4d362864dd338a,Black,Massachusetts,Child Sex Abuse,1990,1997,9,OM,Northeast
+575c66e11c4d362864dd338b,White,California,Child Sex Abuse,1986,1999,48,OM,West
+575c66e11c4d362864dd338c,White,Virginia,Murder,1992,2003,22,OM,South
+575c66e11c4d362864dd338d,Hispanic,New York,Murder,1988,2001,15,OM,Northeast
+575c66e11c4d362864dd338e,Hispanic,Colorado,Murder,2000,2014,Life without parole,OM,West
+575c66e11c4d362864dd338f,Black,New York,Murder,1996,1999,25,OM,Northeast
+575c66e11c4d362864dd3390,Black,New Jersey,Sexual Assault,1987,2006,Life,OM,Northeast
+575c66e11c4d362864dd3391,Black,Virginia,Murder,1978,2010,Life,OM,South
+575c66e11c4d362864dd3392,White,Alabama,Murder,2002,2009,Death,OM,South
+575c66e11c4d362864dd3393,White,Michigan,Murder,1988,1996,Life,OM,Midwest
+575c66e11c4d362864dd3394,Hispanic,New York,Murder,1988,2001,15,OM,Northeast
+575c66e11c4d362864dd3395,Hispanic,California,Murder,1998,2000,Not sentenced,OM,West
+575c66e11c4d362864dd3396,Hispanic,New York,Murder,1993,2011,25,OM,Northeast
+575c66e11c4d362864dd3397,White,Kansas,Assault,2014,2014,Not sentenced,OM,Midwest
+575c66e11c4d362864dd3398,Black,California,Murder,1983,2000,Death,OM,West
+575c66e11c4d362864dd3399,White,Texas,Murder,1987,2011,Life,OM,South
+575c66e11c4d362864dd339a,White,Texas,Murder,1988,1998,Life,OM,South
+575c66e11c4d362864dd339b,White,Pennsylvania,Murder,1986,2013,Life,OM,Northeast
+575c66e11c4d362864dd339c,White,Oregon,Other Nonviolent Felony,2002,2015,20,OM,West
+575c66e11c4d362864dd339d,Black,Oklahoma,Murder,1985,1995,Death,OM,South
+575c66e11c4d362864dd339e,White,Oklahoma,Murder,1995,2014,Life without parole,OM,South
+575c66e11c4d362864dd339f,Black,Texas,Murder,1996,2001,20,OM,South
+575c66e11c4d362864dd33a0,Black,Illinois,Murder,1995,1997,2012,P/FA,Midwest
+575c66e11c4d362864dd33a1,White,Florida,Attempted Murder,1987,1989,15,OM,South
+575c66e11c4d362864dd33a2,Black,Pennsylvania,Murder,1982,1991,Life,OM,Northeast
+575c66e11c4d362864dd33a3,Black,Georgia,Murder,1980,1991,Death,OM,South
+575c66e11c4d362864dd33a4,Black,California,Drug Possession or Sale,1997,1999,7,OM,West
+575c66e11c4d362864dd33a5,Black,Illinois,Murder,1980,1995,Life,OM,Midwest
+575c66e11c4d362864dd33a6,White,California,Murder,1987,2003,Life without parole,OM,West
+575c66e11c4d362864dd33a7,Hispanic,Pennsylvania,Murder,1994,2000,Death,OM,Northeast
+575c66e11c4d362864dd33a8,White,Massachusetts,Child Sex Abuse,1992,2005,16,OM,Northeast
+575c66e11c4d362864dd33a9,Hispanic,California,Murder,1995,2001,40,OM,West
+575c66e11c4d362864dd33aa,White,New York,Murder,1985,1992,25,OM,Northeast
+575c66e11c4d362864dd33ab,Hispanic,Texas,Murder,1989,2002,Life,OM,South
+575c66e11c4d362864dd33ac,White,California,Murder,1985,2012,25,OM,West
+575c66e11c4d362864dd33ad,White,Florida,Drug Possession or Sale,1998,2000,Community service,OM,South
+575c66e11c4d362864dd33ae,White,New York,Sexual Assault,1998,2000,3,OM,Northeast
+575c66e11c4d362864dd33af,Black,Illinois,Murder,1988,2001,Life without parole,OM,Midwest
+575c66e11c4d362864dd33b0,Black,Illinois,Murder,1988,2001,Life,OM,Midwest
+575c66e11c4d362864dd33b1,Black,New York,Sexual Assault,1985,2013,10,OM,Northeast
+575c66e11c4d362864dd33b2,Black,Illinois,Murder,1985,2003,Death,OM,Midwest
+575c66e11c4d362864dd33b3,Hispanic,New York,Murder,1993,2011,50,OM,Northeast
+575c66e11c4d362864dd33b4,Hispanic,Illinois,Murder,2000,2003,Life,OM,Midwest
+575c66e11c4d362864dd33b5,Hispanic,New Jersey,Murder,2001,2003,Not sentenced,OM,Northeast
+575c66e11c4d362864dd33b6,Black,Wisconsin,Murder,1995,1996,2009,P/FA,Midwest
+575c66e11c4d362864dd33b7,White,Texas,Murder,2007,2015,Life without parole,OM,South
+575c66e11c4d362864dd33b8,White,Maryland,Murder,1988,2008,Life,OM,South
+575c66e11c4d362864dd33ba,Hispanic,California,Murder,1998,2000,Not sentenced,OM,West
+575c66e11c4d362864dd33bb,White,Alabama,Murder,1992,1997,Death,OM,South
+575c66e11c4d362864dd33bc,Hispanic,New York,Other Nonviolent Felony,2012,2014,Not sentenced,OM,Northeast
+575c66e11c4d362864dd33be,White,California,Child Sex Abuse,1985,1990,14,OM,West
+575c66e11c4d362864dd33bf,White,Idaho,Murder,1981,2001,Death,OM,West
+575c66e11c4d362864dd33c0,White,Alabama,Murder,1973,1997,Life,OM,South
+575c66e11c4d362864dd33c1,Black,Indiana,Attempted Murder,1998,2006,30,OM,Midwest
+575c66e11c4d362864dd33c2,White,Nebraska,Murder,1956,1991,Life,OM,Midwest
+575c66e11c4d362864dd33c3,White,North Carolina,Child Sex Abuse,1994,2014,Life,OM,South
+575c66e11c4d362864dd33c5,Black,Illinois,Murder,1992,1995,2014,P/FA,Midwest
+575c66e11c4d362864dd33c6,Black,Illinois,Murder,2003,2010,30,OM,Midwest
+575c66e11c4d362864dd33c7,Black,Illinois,Murder,1989,2003,Death,OM,Midwest
+575c66e11c4d362864dd33c8,Black,Illinois,Gun Possession or Sale,2007,2010,6,OM,Midwest
+575c66e11c4d362864dd33c9,White,Minnesota,Other Violent Felony,1989,1991,1,OM,Midwest
+575c66e11c4d362864dd33ca,White,Arizona,Murder,2000,2003,Not sentenced,OM,West
+575c66e11c4d362864dd33cb,Other,Alaska,Murder,1999,2015,60,OM,West
+575c66e11c4d362864dd33cc,White,New York,Assault,1988,1993,3,OM,Northeast
+575c66e11c4d362864dd33cd,White,New York,Assault,1989,1993,1,OM,Northeast
+575c66e11c4d362864dd33ce,Hispanic,Texas,Drug Possession or Sale,2003,2011,Life,OM,South
+575c66e11c4d362864dd33cf,White,Florida,Murder,1999,2012,Death,OM,South
+575c66e11c4d362864dd33d0,Hispanic,New York,Murder,1997,2013,25,OM,Northeast
+575c66e11c4d362864dd33d2,White,Michigan,Child Sex Abuse,2006,2008,Not sentenced,OM,Midwest
+575c66e11c4d362864dd33d3,White,Michigan,Murder,1998,2014,Life without parole,OM,Midwest
+575c66e11c4d362864dd33d4,White,Nebraska,Murder,1994,1995,Not sentenced,OM,Midwest
+575c66e11c4d362864dd33d5,White,Wisconsin,Sexual Assault,1990,1990,Not sentenced,OM,Midwest
+575c66e11c4d362864dd33d6,Black,Maryland,Murder,1995,2000,Life,OM,South
+575c66e11c4d362864dd33d7,Black,Illinois,Murder,1995,2014,30,OM,Midwest
+575c66e11c4d362864dd33d8,White,Texas,Sexual Assault,1982,2008,40,OM,South
+575c66e11c4d362864dd33d9,White,Massachusetts,Murder,1990,2008,Life,OM,Northeast
+575c66e11c4d362864dd33da,White,Wisconsin,Murder,1995,2001,Life,OM,Midwest
+575c66e11c4d362864dd33db,Hispanic,New York,Murder,1994,2000,20,OM,Northeast
+575c66e11c4d362864dd33dc,White,California,Child Sex Abuse,2004,2004,Not sentenced,OM,West
+575c66e11c4d362864dd33dd,White,Oklahoma,Sexual Assault,1986,2001,65,OM,South
+575c66e11c4d362864dd33de,Black,Pennsylvania,Manslaughter,2007,2010,5,OM,Northeast
+575c66e11c4d362864dd33df,White,California,Child Sex Abuse,1985,1991,Life,OM,West
+575c66e11c4d362864dd33e0,White,California,Child Sex Abuse,1985,1991,Life,OM,West
+575c66e11c4d362864dd33e1,White,California,Child Sex Abuse,2001,2015,24,OM,West
+575c66e11c4d362864dd33e2,Black,New York,Murder,1992,1993,1997,P/FA,Northeast
+575c66e11c4d362864dd33e3,White,Florida,Sexual Assault,1988,2002,Life,OM,South
+575c66e11c4d362864dd33e4,White,Oklahoma,Murder,2009,2012,Life without parole,OM,South
+575c66e11c4d362864dd33e5,Black,California,Murder,1975,1992,Life,OM,West
+575c66e11c4d362864dd33e6,Black,Oklahoma,Murder,1997,2009,Death,OM,South
+575c66e11c4d362864dd33e7,Black,California,Murder,1972,1999,25,OM,West
+575c66e11c4d362864dd33e8,White,New York,Robbery,1989,1995,12.5 to 25 years,OM,Northeast
+575c66e11c4d362864dd33e9,Black,Michigan,Murder,2001,2010,32,OM,Midwest
+575c66e11c4d362864dd33ea,Hispanic,New York,Murder,1993,2015,25,OM,Northeast
+575c66e11c4d362864dd33eb,Black,Illinois,Murder,1978,1996,Life,OM,Midwest
+575c66e11c4d362864dd33ec,Hispanic,Texas,Murder,1998,2008,Life,OM,South
+575c66e11c4d362864dd33ee,Hispanic,New York,Child Sex Abuse,1985,1994,8,OM,Northeast
+575c66e11c4d362864dd33ef,White,New York,Murder,1990,1991,2013,P/FA,Northeast
+575c66e11c4d362864dd33f0,Black,Missouri,Murder,1983,1999,Life,OM,Midwest
+575c66e11c4d362864dd33f1,Black,Michigan,Attempted Murder,2001,2009,20,OM,Midwest
+575c66e11c4d362864dd33f2,Black,Michigan,Attempted Murder,2001,2009,20,OM,Midwest
+575c66e11c4d362864dd33f3,Black,Illinois,Murder,1991,2009,Life without parole,OM,Midwest
+575c66e11c4d362864dd33f4,Black,California,Murder,1979,1979,2013,P/FA,West
+575c66e11c4d362864dd33f5,White,New York,Murder,1986,2005,33,OM,Northeast
+575c66e11c4d362864dd33f6,Black,Illinois,Sexual Assault,1988,1997,69,OM,Midwest
+575c66e11c4d362864dd33f7,Black,Florida,Murder,1968,1989,Death,OM,South
+575c66e11c4d362864dd33f9,White,California,Drug Possession or Sale,1999,2001,1,OM,West
+575c66e11c4d362864dd33fc,Hispanic,North Carolina,Murder,1997,1999,Death,OM,South
+575c66e11c4d362864dd33fd,Hispanic,Illinois,Murder,1990,2011,80,OM,Midwest
+575c66e11c4d362864dd33ff,Hispanic,Illinois,Murder,1993,2012,Life,OM,Midwest
+575c66e11c4d362864dd3400,Other,Alaska,Murder,1999,2015,33,OM,West
+575c66e11c4d362864dd3401,Black,California,Murder,1994,2007,Life,OM,West
+575c66e11c4d362864dd3402,Hispanic,New York,Robbery,2007,2011,10,OM,Northeast
+575c66e11c4d362864dd3403,Hispanic,Washington,Child Sex Abuse,1995,2000,5,OM,West
+575c66e11c4d362864dd3404,White,Georgia,Murder,2008,2013,Life,OM,South
+575c66e11c4d362864dd3406,Black,Illinois,Sexual Assault,1994,2004,75,OM,Midwest
+575c66e11c4d362864dd3407,White,Washington,Child Sex Abuse,1995,2000,23,OM,West
+575c66e11c4d362864dd3408,White,California,Child Sex Abuse,1995,2005,27,OM,West
+575c66e11c4d362864dd3409,Black,Illinois,Murder,2004,2015,50,OM,Midwest
+575c66e11c4d362864dd340a,Black,California,Attempted Murder,2006,2013,25,OM,West
+575c66e11c4d362864dd340b,Black,Mississippi,Murder,1980,2011,Life,OM,South
+575c66e11c4d362864dd340d,White,Texas,Robbery,1980,1990,50,OM,South
+575c66e11c4d362864dd340e,Hispanic,Illinois,Assault,2005,2007,Probation,OM,Midwest
+575c66e11c4d362864dd340f,Hispanic,Illinois,Assault,2005,2007,Probation,OM,Midwest
+575c66e11c4d362864dd3410,Hispanic,Illinois,Assault,2005,2007,Probation,OM,Midwest
+575c66e11c4d362864dd3411,White,Massachusetts,Murder,1968,2001,Life,OM,Northeast
+575c66e11c4d362864dd3413,Black,Illinois,Murder,1995,2014,80,OM,Midwest
+575c66e11c4d362864dd3416,Hispanic,Illinois,Murder,2002,2003,12,OM,Midwest
+575c66e11c4d362864dd3417,Black,New York,Assault,1998,2004,6,OM,Northeast
+575c66e11c4d362864dd3418,Black,Massachusetts,Murder,1985,1990,Life,OM,Northeast
+575c66e11c4d362864dd3419,Hispanic,New York,Assault,2009,2012,4,OM,Northeast
+575c66e11c4d362864dd341a,Black,Illinois,Murder,1988,2001,Life without parole,OM,Midwest
+575c66e11c4d362864dd341b,Black,Illinois,Murder,1977,2015,50,OM,Midwest
+575c66e11c4d362864dd341c,White,Michigan,Sexual Assault,1992,2003,22,OM,Midwest
+575c66e11c4d362864dd341e,Black,Massachusetts,Murder,1987,2013,Life without parole,OM,Northeast
+575c66e11c4d362864dd3421,White,Ohio,Assault,1987,1999,10,OM,Midwest
+575c66e11c4d362864dd3422,White,California,Child Sex Abuse,1985,2008,31,OM,West
+575c66e11c4d362864dd3423,White,Connecticut,Child Sex Abuse,2001,2003,6,OM,Northeast
+575c66e11c4d362864dd3424,Hispanic,California,Traffic Offense,1995,1997,8,OM,West
+575c66e11c4d362864dd3425,White,Texas,Drug Possession or Sale,1999,2011,10,OM,South
+575c66e11c4d362864dd3426,Black,New York,Murder,1989,2015,20,OM,Northeast
+575c66e11c4d362864dd3427,Black,Illinois,Murder,1994,2011,20,OM,Midwest
+575c66e11c4d362864dd3428,White,Utah,Child Sex Abuse,1987,1990,5,OM,West
+575c66e11c4d362864dd3429,White,Wisconsin,Sexual Assault,2003,2009,12,OM,Midwest
+575c66e11c4d362864dd342a,Black,California,Murder,1982,2010,Life without parole,OM,West
+575c66e11c4d362864dd342b,Hispanic,Texas,Murder,1998,2008,Life,OM,South
+575c66e11c4d362864dd342c,White,Ohio,Murder,1998,2011,30,OM,Midwest
+575c66e11c4d362864dd342d,Hispanic,Massachusetts,Murder,2006,2010,Life without parole,OM,Northeast
+575c66e11c4d362864dd342e,Black,New Jersey,Murder,1977,2000,Life,OM,Northeast
+575c66e11c4d362864dd3430,Black,North Carolina,Child Sex Abuse,1989,2012,Life,OM,South
+575c66e11c4d362864dd3431,Black,North Carolina,Murder,1978,2015,Life,OM,South
+575c66e11c4d362864dd3432,Black,Indiana,Murder,1983,1991,Death,OM,Midwest
+575c66e11c4d362864dd3433,White,Indiana,Murder,1991,1993,38,OM,Midwest
+575c66e11c4d362864dd3434,Black,Florida,Murder,1986,2000,Death,OM,South
+575c66e11c4d362864dd3435,White,Pennsylvania,Murder,1986,1992,Death,OM,Northeast
+575c66e11c4d362864dd3436,Black,California,Murder,1994,2012,Life,OM,West
+575c66e11c4d362864dd3437,Black,Missouri,Murder,1987,2000,Life,OM,Midwest
+575c66e11c4d362864dd3438,White,New York,Murder,2002,2002,Not sentenced,OM,Northeast
+575c66e11c4d362864dd3439,Black,California,Murder,1994,2009,Life without parole,OM,West
+575c66e11c4d362864dd343a,White,Florida,Drug Possession or Sale,1998,2000,1,OM,South
+575c66e11c4d362864dd343b,White,New Mexico,Murder,1978,1996,Life,OM,West
+575c66e11c4d362864dd343c,Black,New York,Drug Possession or Sale,2013,2015,15,OM,Northeast
+575c66e11c4d362864dd343d,White,Florida,Child Sex Abuse,1986,1998,50,OM,South
+575c66e11c4d362864dd343e,Black,Virginia,Sexual Assault,1986,1993,45,OM,South
+575c66e11c4d362864dd343f,White,District of Columbia,Murder,1975,2005,20,OM,South
+575c66e11c4d362864dd3440,White,Michigan,Murder,1992,2005,20,OM,Midwest
+575c66e11c4d362864dd3443,White,Washington,Child Sex Abuse,1985,2010,Life,OM,West
+575c66e11c4d362864dd3444,White,Tennessee,Murder,1990,1996,Life,OM,South
+575c66e11c4d362864dd3445,Black,Illinois,Sexual Assault,1986,1986,2013,P/FA,Midwest
+575c66e11c4d362864dd3446,White,Illinois,Murder,1987,2004,Death,OM,Midwest
+575c66e11c4d362864dd3447,White,New York,Murder,1992,2010,25,OM,Northeast
+575c66e11c4d362864dd3449,Black,Louisiana,Murder,2009,2015,Life without parole,OM,South
+575c66e11c4d362864dd344a,White,California,Child Sex Abuse,1985,2004,40,OM,West
+575c66e11c4d362864dd344b,White,Missouri,Child Sex Abuse,1997,1999,30,OM,Midwest
+575c66e11c4d362864dd344c,Black,New York,Murder,1986,2014,25,OM,Northeast
+575c66e11c4d362864dd344d,White,Wisconsin,Burglary/Unlawful Entry,1997,2000,120,OM,Midwest
+575c66e11c4d362864dd344e,Black,Texas,Robbery,1999,2009,50,OM,South
+575c66e11c4d362864dd344f,Other,New York,Attempted Murder,1992,2003,16,OM,Northeast
+575c66e11c4d362864dd3450,White,Massachusetts,Murder,1986,1990,Life,OM,Northeast
+575c66e11c4d362864dd3451,Black,Texas,Sexual Assault,1999,2004,25,OM,South
+575c66e11c4d362864dd3452,Black,Michigan,Sexual Assault,1982,2008,30,OM,Midwest
+575c66e11c4d362864dd3453,Black,Virginia,Sexual Assault,1991,1991,Not sentenced,OM,South
+575c66e11c4d362864dd3454,White,Massachusetts,Murder,1968,2001,Death,OM,Northeast
+575c66e11c4d362864dd3455,White,New York,Murder,1990,2008,50,OM,Northeast
+575c66e11c4d362864dd3456,Black,Tennessee,Assault,2012,2013,2,OM,South
+575c66e11c4d362864dd3457,Black,California,Attempted Murder,1990,1998,28,OM,West
+575c66e11c4d362864dd3458,Black,Illinois,Murder,1995,2013,Life without parole,OM,Midwest
+575c66e11c4d362864dd3459,Black,New York,Murder,1989,2004,22,OM,Northeast
+575c66e11c4d362864dd345a,White,North Carolina,Murder,1993,2010,Life,OM,South
+575c66e11c4d362864dd345b,Black,Illinois,Murder,1997,2011,80,OM,Midwest
+575c66e11c4d362864dd345c,White,California,Child Sex Abuse,1985,2001,6,OM,West
+575c66e11c4d362864dd345d,Black,California,Murder,1990,2003,25,OM,West
+575c66e11c4d362864dd345e,Black,Illinois,Murder,1977,2003,Life,OM,Midwest
+575c66e11c4d362864dd345f,Black,New York,Murder,2010,2014,25,OM,Northeast
+575c66e11c4d362864dd3460,White,Louisiana,Murder,1997,2012,Death,OM,South
+575c66e11c4d362864dd3461,Black,New York,Murder,2009,2014,25,OM,Northeast
+575c66e11c4d362864dd3462,Black,Ohio,Murder,1993,1997,18,OM,Midwest
+575c66e11c4d362864dd3463,Black,Louisiana,Murder,1985,2003,Death,OM,South
+575c66e11c4d362864dd3464,Black,Louisiana,Robbery,1985,1999,49,OM,South
+575c66e11c4d362864dd3465,Black,Illinois,Gun Possession or Sale,2003,2006,8,OM,Midwest
+575c66e11c4d362864dd3466,White,Virginia,Murder,2000,2011,Life,OM,South
+575c66e11c4d362864dd3467,Black,Illinois,Murder,1986,2010,Life,OM,Midwest
+575c66e11c4d362864dd3468,White,Ohio,Murder,1992,2015,15,OM,Midwest
+575c66e11c4d362864dd3469,Hispanic,Utah,Child Abuse,2004,2005,Not sentenced,OM,West
+575c66e11c4d362864dd346a,White,Texas,Murder,1999,2009,Death,OM,South
+575c66e11c4d362864dd346b,White,Massachusetts,Murder,1983,2004,Life,OM,Northeast
+575c66e11c4d362864dd346d,Hispanic,New York,Child Sex Abuse,1986,1990,25,OM,Northeast
+575c66e11c4d362864dd346e,White,Washington,Child Sex Abuse,1994,2000,20,OM,West
+575c66e11c4d362864dd346f,White,Michigan,Child Sex Abuse,2006,2013,15,OM,Midwest
+575c66e11c4d362864dd3471,Black,Louisiana,Drug Possession or Sale,1998,2011,Life without parole,OM,South
+575c66e11c4d362864dd3472,Black,California,Murder,2010,2015,50,OM,West
+575c66e11c4d362864dd3473,Black,Louisiana,Murder,1976,2003,Life,OM,South
+575c66e11c4d362864dd3475,Black,New York,Robbery,1988,2005,10,OM,Northeast
+575c66e11c4d362864dd3476,Black,New York,Murder,1973,1998,25,OM,Northeast
+575c66e11c4d362864dd3477,Hispanic,Texas,Sexual Assault,1997,2012,Probation,OM,South
+575c66e11c4d362864dd3478,Hispanic,Virginia,Murder,1985,1989,35,OM,South
+575c66e11c4d362864dd3479,Black,Illinois,Murder,1994,2011,20,OM,Midwest
+575c66e11c4d362864dd347a,Hispanic,New Jersey,Murder,1982,1989,Life,OM,Northeast
+575c66e11c4d362864dd347b,Other,Alaska,Murder,1999,2015,38,OM,West
+575c66e11c4d362864dd347d,Black,New York,Kidnapping,1993,2015,12.5 to 25 years,OM,Northeast
+575c66e11c4d362864dd347e,Black,New York,Murder,1971,1990,20,OM,Northeast
+575c66e11c4d362864dd347f,White,Tennessee,Murder,1997,2012,20,OM,South
+575c66e11c4d362864dd3480,Hispanic,California,Murder,1991,2003,26,OM,West
+575c66e11c4d362864dd3482,Black,Illinois,Sexual Assault,1988,1997,69,OM,Midwest
+575c66e11c4d362864dd3483,Black,New York,Murder,1982,2001,15,OM,Northeast
+575c66e11c4d362864dd3484,Black,Texas,Murder,1987,2001,Life,OM,South
+575c66e11c4d362864dd3485,Black,Texas,Robbery,1996,2012,Life,OM,South
+575c66e11c4d362864dd3486,Black,Virginia,Murder,1984,2000,Death,OM,South
+575c66e11c4d362864dd3487,Black,Illinois,Murder,1996,2015,25,OM,Midwest
+575c66e11c4d362864dd3488,White,Massachusetts,Murder,1983,2001,Life,OM,Northeast
+575c66e11c4d362864dd3489,White,Indiana,Murder,1986,2000,60,OM,Midwest
+575c66e11c4d362864dd348a,White,Arizona,Sexual Assault,2004,2010,14,OM,West
+575c66e11c4d362864dd348b,Black,New Jersey,Murder,1991,2005,Life,OM,Northeast
+575c66e11c4d362864dd348c,White,California,Child Sex Abuse,1985,2005,42,OM,West
+575c66e11c4d362864dd348d,White,Virginia,Kidnapping,2013,2015,8,OM,South
+575c66e11c4d362864dd348e,White,California,Murder,1994,1996,Not sentenced,OM,West
+575c66e11c4d362864dd348f,Black,New York,Drug Possession or Sale,2007,2007,3.5 years,OM,Northeast
+575c66e11c4d362864dd3490,Black,New York,Sexual Assault,1999,2002,20,OM,Northeast
+575c66e11c4d362864dd3491,Black,Illinois,Murder,1990,1991,2015,P/FA,Midwest
+575c66e11c4d362864dd3492,Black,Virginia,Murder,1993,1994,Not sentenced,OM,South
+575c66e11c4d362864dd3494,White,Illinois,Murder,1987,2008,Life,OM,Midwest
+575c66e11c4d362864dd3495,White,Ohio,Child Sex Abuse,1985,1997,Life,OM,Midwest
+575c66e11c4d362864dd3496,Black,North Carolina,Murder,2002,2011,12,OM,South
+575c66e11c4d362864dd3497,Black,Massachusetts,Murder,2010,2013,Life,OM,Northeast
+575c66e11c4d362864dd3498,Black,Texas,Drug Possession or Sale,1987,1989,30,OM,South
+575c66e11c4d362864dd3499,Black,Alabama,Child Sex Abuse,2007,2011,Life,OM,South
+575c66e11c4d362864dd349a,Black,Oklahoma,Sexual Assault,2012,2014,Probation,OM,South
+575c66e11c4d362864dd349b,Black,Illinois,Murder,1978,1996,Death,OM,Midwest
+575c66e11c4d362864dd349c,Black,Ohio,Assault,1997,2015,Probation,OM,Midwest
+575c66e11c4d362864dd349d,Black,Illinois,Child Sex Abuse,1986,1995,12,OM,Midwest
+575c66e11c4d362864dd349e,Black,Louisiana,Murder,1968,1997,Life,OM,South
+575c66e11c4d362864dd349f,White,Georgia,Murder,1982,1989,Life,OM,South
+575c66e11c4d362864dd34a0,Black,Florida,Manslaughter,2013,2015,50,OM,South
+575c66e11c4d362864dd34a1,Black,Texas,Murder,1987,1993,Life,OM,South
+575c66e11c4d362864dd34a2,Black,California,Child Sex Abuse,2000,2013,16,OM,West
+575c66e11c4d362864dd34a4,Black,Louisiana,Murder,1997,2011,Life,OM,South
+575c66e11c4d362864dd34a5,Black,California,Murder,1998,2015,Life without parole,OM,West
+575c66e11c4d362864dd34a6,Black,Texas,Drug Possession or Sale,1998,2000,Life,OM,South
+575c66e11c4d362864dd34a7,White,Oklahoma,Murder,1988,1999,Death,OM,South
+575c66e11c4d362864dd34a8,Black,Louisiana,Child Sex Abuse,1982,2003,Life without parole,OM,South
+575c66e11c4d362864dd34a9,White,Texas,Murder,1987,2004,Death,OM,South
+575c66e11c4d362864dd34aa,Black,Illinois,Sexual Assault,1993,1999,Life,OM,Midwest
+575c66e11c4d362864dd34ab,White,Wyoming,Murder,2010,2012,life,OM,West
+575c66e11c4d362864dd34ad,Black,Pennsylvania,Murder,1989,2005,Death,OM,Northeast
+575c66e11c4d362864dd34ae,White,Missouri,Murder,1987,1995,Life without parole,OM,Midwest
+575c66e11c4d362864dd34af,White,North Carolina,Child Sex Abuse,1993,1997,Life,OM,South
+575c66e11c4d362864dd34b0,Black,Illinois,Attempted Murder,1999,2006,30,OM,Midwest
+575c66e11c4d362864dd34b1,Black,New York,Murder,1994,2014,9,OM,Northeast
+575c66e11c4d362864dd34b3,Black,Illinois,Murder,2007,2012,40,OM,Midwest
+575c66e11c4d362864dd34b4,White,Illinois,Murder,1989,2001,45,OM,Midwest
+575c66e11c4d362864dd34b5,Black,North Carolina,Murder,1976,2014,80,OM,South
+575c66e11c4d362864dd34b6,Other,New York,Murder,1987,2004,25,OM,Northeast
+575c66e11c4d362864dd34b7,Black,Texas,Murder,1981,2008,Life,OM,South
+575c66e11c4d362864dd34b8,White,California,Traffic Offense,2007,2012,Community service,OM,West
+575c66e11c4d362864dd34ba,White,Missouri,Murder,1995,2014,31,OM,Midwest
+575c66e11c4d362864dd34bb,Black,Georgia,Robbery,2000,2011,15,OM,South
+575c66e11c4d362864dd34bc,Black,Illinois,Sexual Assault,1983,2013,Life,OM,Midwest
+575c66e11c4d362864dd34bd,Black,District of Columbia,Murder,1979,2014,20,OM,South
+575c66e11c4d362864dd34bf,Black,Texas,Sexual Assault,1981,2012,99,OM,South
+575c66e11c4d362864dd34c0,White,Illinois,Drug Possession or Sale,2005,2006,8,OM,Midwest
+575c66e11c4d362864dd34c1,Black,New York,Murder,1994,2014,75,OM,Northeast
+575c66e11c4d362864dd34c2,White,Pennsylvania,Murder,1982,2003,Death,OM,Northeast
+575c66e11c4d362864dd34c3,Black,Illinois,Murder,1994,2005,Life without parole,OM,Midwest
+575c66e11c4d362864dd34c4,White,Ohio,Manslaughter,1998,2011,50,OM,Midwest
+575c66e11c4d362864dd34c5,White,Ohio,Other Nonviolent Felony,1988,1992,5,OM,Midwest
