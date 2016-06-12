@@ -1,0 +1,21 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\Users\Tazzie\Desktop\ProgrammingStuff\GitHub\CSULA-CS454-BigData\beautiful-data-project-95-96-bulls\.metadata\.plugins\org.eclipse.core.resources\.projects\CS454_Python\com.python.pydev.analysis\v2_indexcache
+examples.temperature|1464654007433622000|C:\Users\Tazzie\Desktop\ProgrammingStuff\GitHub\CSULA-CS454-BigData\beautiful-data-project-95-96-bulls\CS454_Python\src\examples\temperature.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=examples.temperature
+-- END DICTIONARY
+-- START TREE 1
+6
+acq|0|
+ana|0|
+avg|1|avg_temperature!11@
+byt|0|
+mai|0|
+que|0|
+-- END TREE
+-- START TREE 2
+0
+-- END TREE
